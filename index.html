@@ -140,6 +140,14 @@
   .planb .pb-txt{font-size:.88rem;color:#3c545e}
   .planb .pb-txt b{color:var(--blue-d);display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
 
+  .geheim{display:flex;gap:11px;margin-top:14px;padding:12px 15px;border-radius:10px;background:#faf4e8;border:1px solid #e8d9a0}
+  .geheim .g-ico{font-size:1.2rem;line-height:1.4;flex:none}
+  .geheim .g-txt{font-size:.88rem;color:#6b5932}
+  .geheim .g-txt b{color:#8a6820;display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+  .geheim .g-txt ul{margin:4px 0 0;padding-left:16px;list-style:disc}
+  .geheim .g-txt ul li{margin-bottom:3px;padding:0;border:none;position:static}
+  .geheim .g-txt ul li::before{display:none}
+
   footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);text-align:center}
   footer a{color:var(--blue-d)}
 
@@ -288,6 +296,9 @@
       (<span id="wx-updated">wird geladen …</span>).
       Werte können sich täglich verschieben – für graue Tage hat jeder Tag unten einen <b>„Bei Regen"-Plan B</b>.
     </div>
+    <div class="note" style="border-color:#c0804a;background:#fdf0e6;color:#6b4520;margin-top:10px">
+      <b>☀️ Sommer 2026 – was dieses Jahr anders ist:</b> Sieben Landkreise in Südschweden (darunter Kalmar, Skåne, Blekinge) stehen unter offizieller Dürrewarnung. Seen sind auf Tiefstständen. Das Wetter ist <b>warm und überwiegend trocken (20–25 °C)</b>, bringt aber typische <b>Nachmittagsgewitter</b> – kurz, kräftig, lokal. Strategie: Outdoor-Höhepunkte morgens planen, Puffer nachmittags. Offenes Feuer in der Natur verboten bei erhöhter Brandgefahr – Brandindex vorher prüfen (smhi.se). Öland / Stora Alvaret besonders trocken – reichlich Wasser einpacken.
+    </div>
     <div class="note" id="wx-strategy" style="border-color:var(--sage);background:#eef3ea;color:#46553c;display:none">
       <b>Strategie statt Sorge:</b> <span id="wx-strategy-text"></span>
     </div>
@@ -321,6 +332,13 @@
         </ul>
         <div class="tags"><span class="chip foto">Fotografie</span><span class="chip food">Genuss</span></div>
         <p class="char">Ruhiger Start, kein Stress – erstes Schweden-Gefühl.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Gränna</b>
+          <ul>
+            <li><b>Röttle By</b> – 3 km von der Stadt: zwei historische Mühlen, 12-m-Wasserfall, Holzhäuser aus dem 18./19. Jh. auf einem kaum beschilderten Rundweg. Bestes Licht ca. 19 Uhr. Fast kein Tourist findet diesen Ort.</li>
+            <li><b>Brahehus Ruine</b> – 3 km nördlich auf der E4: Burgruine auf 270 m mit Blick über den Vättern und Visingsö als natürliche Fenster. Freier Eintritt, Parkplatz beleuchtet – ideal für den Sonnenuntergang (~22:09 Uhr).</li>
+            <li><b>Gränna Choklad</b> statt der Standard-Polkagris-Shops: Artisan-Schokolade &amp; Trüffel, deutlich hochwertiger und kaum beworben.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Die Polkagris-Schauproduktion ist überdacht; dazu das <button class="place" data-k="grenna-museum">Grenna Museum</button> (Andrées Polarexpedition) und ein langes Abendessen.</span></div>
       </div>
@@ -348,6 +366,14 @@
           <li class="eve">Rückfahrt, Abend am Vättern</li>
         </ul>
         <div class="tags"><span class="chip foto">Fähre · alte Eichen · Abendlicht</span><span class="chip lit">nostalgisch-historisch</span></div>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Visingsö</b>
+          <ul>
+            <li><b>Näs Castle</b> (6 km südlich der Fähre) – Schwedens erstes Königsschloss aus dem 12. Jh., 1318 niedergebrannt. Viel weniger besucht als Visingsborg, direkter Seezugang mit kleinem Bootssteg daneben.</li>
+            <li><b>Eichenalleen-Gravel Roads</b> – vom Schwedischen Touristenverband zu „Schwedens schönsten Schotterstraßen" gewählt. Perfekt ausgerichtete Baumtunnel. Bestes Licht: morgens oder goldene Stunde.</li>
+            <li><b>Gladhytt Alpacka Farm</b> – Hängematten zwischen Obstbäumen, Alpakas füttern (Vorabbuchen!), Keramik-Shop und Poke Bowls. Ein echter Insiders-Ort, kaum vermarktet.</li>
+            <li><b>Svensgårdens Kafé</b>: Verglaste Veranda mit Seesicht, hausgemachte Ostkaka – weit besser als die Hafen-Cafés.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Visingsö ist Outdoor – bei Dauerregen mit dem Bullerbü-Tag (28.06) tauschen, oder kurz hinüber für Brahekyrkan &amp; Inselcafé und sonst das Grenna Museum.</span></div>
       </div>
@@ -376,8 +402,15 @@
         </ul>
         <div class="tags"><span class="chip">Ortswechsel</span><span class="chip nat">Natur optional</span><span class="chip foto">Holzhäuser</span></div>
         <p class="char">Kombination aus Ortswechsel und leichtem Sightseeing – nicht überladen.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Eksjö</b>
+          <ul>
+            <li><b>Skurugata früh morgens</b> – Im Sommer bildet sich Bodennebel in der 800-m-Schlucht (bis 35 m tief, bis zu 20 °C kühler als oben). Frühstart lohnt sich besonders. Festes Schuhwerk Pflicht.</li>
+            <li><b>Runkesten</b> – Riesiger Gletscherfindling bei Eksjö, der zu kippen scheint. Einfache Zufahrt, kaum besucht, fotogen.</li>
+            <li><b>Eksjö Konditori Gamla Stan</b> – Heritage-Interieur, frisch renoviert 2025, bester Fika-Stopp der Stadt. <b>Albert Bistro</b> im Stadshotell (Haus von 1862): lokaler Treffpunkt abends, Reservierung empfehlenswert.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
-          Eksjös Altstadt lässt sich unter den Arkaden bummeln; dazu das kleine Eksjö Museum und ein Café. Die Skurugata-Schlucht dann auslassen.</span></div>
+          Eksjös Altstadt lässt sich unter den Arkaden bummeln; dazu das kleine Eksjö Museum und ein Café. Die Skurugata-Schlucht dann bei besserem Wetter nachholen.</span></div>
       </div>
     </div>
 
@@ -402,6 +435,12 @@
         </ul>
         <div class="tags"><span class="chip lit">Astrid Lindgren</span><span class="chip">Erholung</span></div>
         <p class="char">Kein voller Freizeitpark-Tag – lieber bewusst langsam und atmosphärisch.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipp Vimmerby-Region</b>
+          <ul>
+            <li><b>Norra Kvill Nationalpark</b> (~15 km von Vimmerby) – Schwedens letzte echte Urwälder: bis 350 Jahre alte Fichten, 200+ Moosarten, Eiszeitfelsen, stille Waldseen. Kein Eintritt. Der See Stora Idgölen mit Seerosen ist ein Fotomärchen. Wird von fast allen Vimmerby-Touristen komplett übergangen.</li>
+            <li><b>Brygghuset</b> – Das Restaurant, in das Vimmerbyer selbst gehen: Hausgemachte Köttbullar, Kaffee vom lokalen Röster. Keine Touristenpreise.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Idealer Schlechtwettertag – Näs-Ausstellung, Buchladen und Café sind drinnen. Wer mehr will: Abstecher ins <button class="place" data-k="kosta-boda">Glasreich (Kosta Boda)</button>.</span></div>
       </div>
@@ -430,6 +469,14 @@
         </ul>
         <div class="tags"><span class="chip foto">rote Holzhäuser · Wiesen · Zäune</span><span class="chip lit">Lindgren-Drehorte</span></div>
         <p class="char">Sanft, nostalgisch, schön für langsames Entdecken – keine Stopps erzwingen.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Bullerbü &amp; Katthult</b>
+          <ul>
+            <li><b>Vor 10 Uhr ankommen</b> – Sevedstorp ist ganzjährig ohne Schranke zugänglich. Morgens habt ihr die Höfe oft ganz allein. Goldenes Licht über den Hofgebäuden und den Wiesen ist der eigentliche Fotomoment.</li>
+            <li><b>Die echte Geschichte</b>: Astrid Lindgrens Vater wuchs auf der Mellangården in Sevedstorp auf. Kein konstruiertes Set – ein echter Familienort. Das gibt dem Besuch eine ganz andere emotionale Tiefe.</li>
+            <li><b>Gibberydssågen</b> – Alte renovierte Wassermühle wenige Gehminuten von Katthult. Fast kein Besucher kennt sie. Mühlenrad, Waldbach und rote Holzhäuser: starkes Fotomotiv.</li>
+            <li><b>Norra Kvill</b> liegt nur 2,5 km von Katthult – ideal als zweite Station des Tages.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Bullerbü lebt vom schönen Wetter – bei Regen mit dem Näs-Tag (27.06) tauschen, oder stattdessen ins <button class="place" data-k="kosta-boda">Glasreich</button> bzw. zur Erlebnisburg <button class="place" data-k="boda-borg">Boda Borg</button> (Rätselräume).</span></div>
       </div>
@@ -456,6 +503,14 @@
           <li class="eve"><span class="badge b-tip">Tipp</span> abends bewusst ein ruhiger <b>Spieleabend</b> – der Ausflug heute ist leicht genug dafür</li>
         </ul>
         <div class="tags"><span class="chip foto">Hafen · Boote · Wasserlicht</span><span class="chip nerd">Spieleabend</span><span class="chip food">Fisch</span></div>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Västervik</b>
+          <ul>
+            <li><b>Slottsholmen</b> – Björn Ulvaeus' (ABBA) persönliches Projekt: Restaurant &amp; Livemusik direkt an einer Burgruine am Wasser. Offene Küche, Fleisch aus eigenem Aging, ernsthafter Weinkeller. Kein Touristenbetrieb – eine Leidenschaft. Tischreservierung nötig.</li>
+            <li><b>Das Postboot (Postbåten)</b> – Mo / Mi / Fr fährt das reguläre Versorgungsboot durch den Schärenarchipel zu echten Bewohnerinseln, die kein Touristenboot ansteuert. Passagiere willkommen. Am Hafen nachfragen.</li>
+            <li><b>Hasselö</b> (20 Min. Taxiboot, autofrei): Fahrrad- oder Kajak-Verleih, Naturreservat Sladö mit Küstenklippen. <b>Restaurang Sjökanten</b> direkt im Bootshaus – echter Schärencharakter, Mittagsbuffet mit Räucherlachs.</li>
+            <li><b>Eagle &amp; Seal Safari</b>: Frühe Morgenabfahrt für Kegelrobben und Seeadler mit 2,5 m Spannweite in Nahaufnahme.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Die Schärenbootstour braucht gutes Wetter – bei Regen Hafencafés &amp; Stadtbummel verkürzen und den <b>Spieleabend</b> nach vorne ziehen.</span></div>
       </div>
@@ -483,8 +538,13 @@
           <li class="eve">Unterkunft beziehen, kurzer Abendspaziergang an der Küste</li>
         </ul>
         <div class="tags"><span class="chip nerd">Kalmar Schloss</span><span class="chip foto">Brücke · Festung</span></div>
-        <div class="planb"><span class="pb-ico">☀️</span><span class="pb-txt"><b>Wetter-Bonus</b>
-          Sonniges Hoch – falls die Hitze zu viel wird, kühlt das <button class="place" data-k="kronan-museum">Kalmar läns museum</button> mit der Kronan-Wrackausstellung (indoor &amp; nerdig) angenehm ab.</span></div>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipp Kalmar</b>
+          <ul>
+            <li><b>Postgatan</b> – Steht regelmäßig im schwedischen White Guide (Skandinaviens Michelin-Äquivalent), außerhalb Schwedens aber kaum bekannt. Tasting-Menü als besonderes Abendessen vor oder nach der Öland-Überquerung. Vorabreservierung empfohlen.</li>
+          </ul>
+        </div></div>
+        <div class="planb"><span class="pb-ico">☀️</span><span class="pb-txt"><b>Wetter 2026</b>
+          Warm (20–24 °C) aber Vorsicht: Nachmittagsgewitter möglich. Kalmar Schloss morgens, Ölandbrücke am frühen Nachmittag. Bei Hitze kühlt das <button class="place" data-k="kronan-museum">Kalmar läns museum</button> mit der Kronan-Wrackausstellung (indoor &amp; nerdig) angenehm ab.</span></div>
       </div>
     </div>
 
@@ -510,8 +570,16 @@
         </ul>
         <div class="tags"><span class="chip foto">Weite · Kalksteppe · Leuchtturm</span><span class="chip nat">Vögel &amp; Küste</span><span class="chip nerd">Eketorp</span></div>
         <p class="char">Weit, ruhig, naturbetont – besonders schön im Abendlicht.</p>
-        <div class="planb"><span class="pb-ico">☀️</span><span class="pb-txt"><b>Sonnentag nutzen!</b>
-          Laut Prognose der beste Tag der Reise – genau richtig für die Weite von Süd-Öland. Bei Wetterumschwung bieten Eketorp und das Naturum Ottenby Schutz.</span></div>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Süd-Öland</b>
+          <ul>
+            <li><b>Ottenby bei Sonnenaufgang</b> – Die Vogelwarte öffnet früh und ist das älteste Vogelbeobachtungsgebiet Schwedens (seit 1946). Vor 9 Uhr habt ihr das Reservat fast für euch. Echte Zugvogelwissenschaft in Aktion.</li>
+            <li><b>Stora Alvaret morgens</b> – Mittags liegt die Weite im flachen Hochlicht und wirkt fotografisch leblos. Morgens oder abends mit schrägem Licht ist der Kontrast zur Kalksteppe dramatisch anders.</li>
+            <li><b>Gettlinge Gravfält</b> – Bronzezeitliches Hügelgräberfeld mit direktem Meerblick, 1 km entlang der Westküste. Kaum erwähnt, aber einer der stärksten Sonnenuntergangsplätze der ganzen Insel.</li>
+            <li><b>Elise in Djupvik</b> – Kleines, verstecktes Restaurant an der Westküste mit frisch angeliefertem Fisch. Laut schwedischen Reisebloggern „einer der besten Restaurantabende auf Öland".</li>
+          </ul>
+        </div></div>
+        <div class="planb"><span class="pb-ico">☀️</span><span class="pb-txt"><b>Wetter 2026 – früh starten!</b>
+          Öland ist diesen Sommer besonders trocken – viel Wasser einpacken, Sonnenschutz nicht vergessen. Outdoor-Programm morgens, da nachmittags kurze Gewitter möglich. Bei Wetterumschwung bieten Eketorp und das Naturum Ottenby trockenen Schutz.</span></div>
       </div>
     </div>
 
@@ -536,6 +604,12 @@
         </ul>
         <div class="tags"><span class="chip foto">Schlossruine · Park · Hafen</span><span class="chip food">Genuss</span></div>
         <p class="char">Klassisch, schön, nicht zu anstrengend.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipp Borgholm</b>
+          <ul>
+            <li><b>Capellagården</b> – Handwerks- und Designschule des verstorbenen Kunsthandwerkers Carl Malmsten, direkt auf Öland. Sommercafé, Galerie, wunderschöne Gartenanlage. Kaum vermarktet, weit abseits der Touristenströme. Perfekter Nachmittag nach der Schlossruine.</li>
+            <li><b>Sonnenuntergang Köpingsvik</b> – Westküste Ölands, ca. 5 km südlich von Borgholm. Flaches Wasser, keine Felsen, spektakuläres Abendlicht über der Ostsee.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen / Wind</b>
           Solliden hat Gewächshäuser &amp; Café; alternativ das <button class="place" data-k="kronan-museum">Kalmar läns museum (Kronan)</button> oder das teils überdachte Freilichtmuseum <button class="place" data-k="himmelsberga">Himmelsberga</button>.</span></div>
       </div>
@@ -563,8 +637,15 @@
           <li class="eve"><span class="badge b-food">Essen</span> <span class="badge b-tip">Tipp</span> Einkehr in Sandvik / Köpingsvik; Pausen einplanen, nicht hetzen</li>
         </ul>
         <div class="tags"><span class="chip foto">Felsformationen · karge Küste</span><span class="chip lit">Theorins Öland-Krimis</span><span class="chip nerd">Raukar</span></div>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Nord-Öland</b>
+          <ul>
+            <li><b>Byrums Raukar vor 9 Uhr oder nach 19 Uhr</b> – Tagsüber flaches Hochlicht, die Säulen wirken flach. Im schrägen Licht nehmen sie orange-goldene Töne an und werfen dramatische Schatten. Der Unterschied ist enorm.</li>
+            <li><b>Kårehamns Fisk</b> – Kleiner Outdoor-Fischherd am Hafen von Kårehamn. Die Einheimischen kommen hierher, kein Tourismus. Frisch gegrillter Fisch direkt vom Kutter. Öffnungszeiten variabel.</li>
+            <li><b>Neptuni Åkrar</b>: Im Frühjahr explodiert das Plateau in Wildblumen – im Hochsommer sind die blauen Natternkopffelder dennoch beeindruckend, aber am frühen Morgen vor der Hitze am schönsten.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">🌥️</span><span class="pb-txt"><b>Wetter passt</b>
-          Bedeckt-windig macht die rauen Raukar &amp; die karge Küste sogar dramatischer – ideales Theorin-Krimi-Wetter. Nur bei Dauerregen lieber Borgholm-Indoor oder das Kalmar-Museum.</span></div>
+          Bedeckt-windig macht die rauen Raukar &amp; die karge Küste sogar dramatischer – ideales Theorin-Krimi-Wetter. Früh starten: Nachmittagsgewitter 2026 möglich. Nur bei Dauerregen lieber Borgholm-Indoor oder das Kalmar-Museum.</span></div>
       </div>
     </div>
 
@@ -589,6 +670,11 @@
         </ul>
         <div class="tags"><span class="chip">Reisetag</span></div>
         <p class="char">Reisetag, kein voller Ausflugstag.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipp Fahrtag</b>
+          <ul>
+            <li><b>Kristianstad statt Karlskrona</b> als Zwischenstopp: Barockstadt mit dem Naturreservat Kristianstads Vattenrike (UNESCO-Biosphäre) direkt am Stadtrand – kostenlos, ruhig und fotografisch lohnend.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Statt Stadtbummel das <button class="place" data-k="karlskrona-marinmuseum">Marinmuseum Karlskrona</button> (Top-Indoor-Museum, U-Boot &amp; Schiffe, freier Eintritt) als trockener Zwischenstopp.</span></div>
       </div>
@@ -615,6 +701,13 @@
           <li class="eve">Wenn möglich Sonnenuntergang an den Steinen – das stärkste Licht des Tages</li>
         </ul>
         <div class="tags"><span class="chip foto">Steine · Meer · Abendlicht</span><span class="chip nerd">Mystik</span><span class="chip food">Räucherfisch</span></div>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Ales Stenar &amp; Kåseberga</b>
+          <ul>
+            <li><b>Astronomische Ausrichtung</b> – Die Längsachse der Schiffssetzung zeigt exakt zum Sommersonnenuntergang. Bei goldener Stunde fotografiert ihr also entlang der archäologisch absichtlichen Blickachse. Für genauen Winkel: The Photographer's Ephemeris nutzen.</li>
+            <li><b>Brygghuset Kåseberga</b> statt des offensichtlichen Fischstands: kleines Hafenrestaurant mit lokalen Delikatessen, weniger Tourist-Betrieb.</li>
+            <li><b>Timing</b>: Vor 10 Uhr oder nach 20 Uhr für deutlich weniger Besucher. Sonnenuntergang (~21:30 Uhr im Juli) ist das Highlight – noch 20+ Leute dort, aber bei Weitem nicht so voll wie tagsüber.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Ales Stenar wirkt bei dramatischem Himmel fast noch stärker – Regenjacke genügt. Bei Dauerregen: <button class="place" data-k="glimmingehus">Glimmingehus</button> (besterhaltene mittelalterliche Burg Skandinaviens) plus Räucherfisch in Kåseberga.</span></div>
       </div>
@@ -645,6 +738,13 @@
         </div>
         <div class="tags"><span class="chip nat">Nationalpark · Küste</span><span class="chip foto">Aussicht · Hafen</span><span class="chip nerd">Kungagraven</span><span class="chip food">Apfelregion</span></div>
         <p class="char">Idealer Tag, um Natur und Genuss zu verbinden.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Stenshuvud &amp; Österlen-Küste</b>
+          <ul>
+            <li><b>Stenshuvud morgens</b> – Wegen möglicher Nachmittagsgewitter (Sommer 2026): Gipfelwanderung am Vormittag einplanen, nicht nachmittags. Bei klarer Sicht Blick bis Bornholm.</li>
+            <li><b>Haväng Naturreservat</b> (zwischen Stenshuvud und Simrishamn) – Granit-Küstenlinie, Wildorchideen, Wacholderhänge. Kaum beschildert, kaum besucht. Einer der schönsten Küstenabschnitte ganz Schwedens laut Landschaftsfotografen.</li>
+            <li><b>Skillinge</b> statt Simrishamn fürs Abendessen – Kleines Hafendorf südwestlich, vollkommen unkommerziell. <b>Skillinge Hamnkrog</b>: Fisch &amp; Meeresfrüchte direkt von den Kuttern, echter Insidertipp der Österlenbewohner.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Gipfel-Wanderung sparen und auf Genuss &amp; Kultur umschwenken: Kivik Musteri (Verkostung indoor), <button class="place" data-k="glimmingehus">Glimmingehus</button>, das Österlens Museum in Simrishamn und die Galerien der Region.</span></div>
       </div>
@@ -672,6 +772,13 @@
         </ul>
         <div class="tags"><span class="chip lit">Wallander / Mankell</span><span class="chip">Erholung</span><span class="chip foto">Fachwerk</span></div>
         <p class="char">Klassisch, charmant und bewusst ruhig als Abschluss.</p>
+        <div class="geheim"><span class="g-ico">🗝️</span><div class="g-txt"><b>Geheimtipps Ystad &amp; Abschlussabend</b>
+          <ul>
+            <li><b>Wallander-Realität statt Touristenfalle</b> – Fridolfs Konditori wurde buchstäblich zum „Wallander Café" umgebaut und ist vollständig kommerzialisiert. Interessanter: das Vorbild für Wallander war der echte Polizist Kurt Ingvar Wald, der noch in Ystad lebt – seine Interviews sind online und geben dem Besuch eine ganz andere Tiefe.</li>
+            <li><b>Brösarps Backar</b> (10 km nordwestlich) – Sanfte Hügellandschaft mit besonderem Licht durch Ostsee-Nähe und flache Topographie. Morgens für Fotografen ideal als Einstieg vor Ystad.</li>
+            <li><b>VYN</b> (nahe Rörum, ~20 Min. von Ystad) – Eröffnet Oktober 2023, innerhalb von 6 Monaten zwei Michelin-Sterne. Die <b>Food &amp; Wine Bar</b> im selben Haus ist ohne Reservierung zugänglich. Das stärkste Abschlussessen der gesamten Reise.</li>
+          </ul>
+        </div></div>
         <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
           Perfekter Regentag-Abschluss: die <button class="place" data-k="ystad-studios">Ystad Studios</button> (Wallander-Kulissen, indoor), das Kloster, das Kunstmuseum und gemütliche Cafés in den Gassen.</span></div>
       </div>
