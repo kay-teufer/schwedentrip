@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Südschweden – Paarreise 24.06.–08.07.2026</title>
+<style>
+  :root{
+    --bg:#f6f3ed; --paper:#fffdf9; --ink:#2c3137; --muted:#6f7780;
+    --line:#e6dfd2; --blue:#4a6b7c; --blue-d:#37525f; --sage:#7d8f72;
+    --sage-d:#5f7155; --gold:#b8954a; --rose:#a9756b; --soft:#eef1ef;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    overflow-wrap:break-word;
+  }
+  h1,h2,h3,.serif{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-weight:600;}
+  a{color:var(--blue-d)}
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px 90px}
+
+  /* Hero */
+  header.hero{
+    background:linear-gradient(160deg,#41606e 0%,#5c7a6b 100%);
+    color:#fdfbf6; padding:62px 22px 52px; text-align:center;
+    padding-top:max(62px,env(safe-area-inset-top));
+  }
+  header.hero .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;opacity:.82;margin:0 0 14px}
+  header.hero h1{font-size:2.5rem;line-height:1.15;margin:0 0 14px}
+  header.hero p.sub{margin:0 auto;max-width:560px;font-size:1.05rem;opacity:.93}
+  header.hero .dates{margin-top:22px;font-size:.95rem;opacity:.9}
+
+  /* Sections */
+  section{margin-top:42px}
+  h2.section-title{
+    font-size:1.5rem;margin:0 0 6px;color:var(--blue-d);
+    display:flex;align-items:baseline;gap:12px;
+  }
+  h2.section-title::after{content:"";flex:1;height:1px;background:var(--line)}
+  .lead{color:var(--muted);margin:0 0 22px;font-size:.96rem}
+
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px}
+  .fact{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .fact .lbl{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .fact .val{font-family:Georgia,serif;font-size:1.12rem;margin-top:4px}
+  .fact .val small{font-weight:400;color:var(--muted);font-size:.8rem}
+
+  /* Transfer table */
+  .transfers{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .transfers table{width:100%;border-collapse:collapse;font-size:.92rem}
+  .transfers th,.transfers td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  .transfers th{background:var(--soft);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .transfers tr:last-child td{border-bottom:none}
+  .transfers .route{font-family:Georgia,serif}
+  .transfers .km{white-space:nowrap;color:var(--blue-d);font-weight:600}
+  .ferry-row td{background:#f2f5f6}
+
+  .legend{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.85rem;color:var(--muted);margin-top:14px}
+  .note{border-left:3px solid var(--gold);background:#fbf6ea;
+    padding:12px 16px;border-radius:0 10px 10px 0;font-size:.88rem;color:#6b5a35;margin-top:16px}
+
+  /* Day cards */
+  .day{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-top:20px;overflow:hidden}
+  .day-head{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:20px 22px 16px}
+  .daynum{flex:none;width:58px;height:58px;border-radius:50%;background:var(--soft);border:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+  .daynum .d{font-family:Georgia,serif;font-size:1.4rem;font-weight:600;color:var(--blue-d)}
+  .daynum .m{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+  .day-head .titles{flex:1;min-width:180px}
+  .day-head .wd{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .day-head h3{margin:2px 0 0;font-size:1.22rem}
+  .stay{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--sage-d);margin-top:4px}
+  .stay::before{content:"●";color:var(--sage);font-size:.7rem}
+
+  .wx{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;
+    padding:12px 22px;background:linear-gradient(90deg,#eef3f4,#eef1ec);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.9rem}
+  .wx .ico{font-size:1.5rem;line-height:1}
+  .wx .temp{font-family:Georgia,serif;font-size:1.05rem}
+  .wx .temp .lo{color:var(--muted)}
+  .wx .cond{color:var(--ink)}
+  .wx .meta{color:var(--muted);font-size:.82rem}
+  .wx .tag{margin-left:auto;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 9px;border-radius:20px;border:1px solid var(--line);color:var(--muted);background:#fff}
+  .wx .tag.fc{color:var(--blue-d);border-color:#cfe0e4;background:#eef5f7}
+  .wx .tag.cl{color:var(--gold);border-color:#ecdcb4;background:#fbf4e3}
+  .wx.loading .ico{opacity:.45;animation:wxpulse 1.4s ease-in-out infinite}
+  .wx.error{background:#faf3f2;color:#6b4a44}
+  @keyframes wxpulse{0%,100%{opacity:.35}50%{opacity:1}}
+
+  .transfer-banner{display:flex;align-items:flex-start;gap:10px;padding:11px 22px;
+    background:#f3f6f7;border-bottom:1px solid var(--line);font-size:.88rem;color:var(--blue-d)}
+  .transfer-banner b{font-weight:600}
+  .transfer-banner .pin{font-size:1rem;flex:none}
+
+  .day-body{padding:18px 22px 22px}
+  ul.acts{margin:0;padding:0;list-style:none}
+  ul.acts li{position:relative;padding:7px 0 7px 26px;border-bottom:1px dashed #ece6da}
+  ul.acts li:last-child{border-bottom:none}
+  ul.acts li::before{content:"";position:absolute;left:6px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--sage)}
+  ul.acts li.eve::before{background:var(--blue)}
+
+  .badge{display:inline-block;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;
+    font-weight:700;padding:2px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+  .b-tip{background:#e8f0e6;color:var(--sage-d)}
+  .b-food{background:#fbeee6;color:#9a5e44}
+
+  /* place popout trigger */
+  .place{font:inherit;color:var(--blue-d);background:none;border:none;padding:0;margin:0;cursor:pointer;
+    border-bottom:1px dotted var(--blue);line-height:inherit;display:inline}
+  .place::after{content:"›";font-size:.85em;opacity:.55;margin-left:2px}
+  .place:hover,.place:focus-visible{color:#26424d;border-bottom-style:solid;outline:none}
+
+  .boot{display:inline-block;margin-left:5px;font-size:.9em;cursor:help;vertical-align:1px}
+
+  a.maproute{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:.82rem;
+    text-decoration:none;color:var(--blue-d);background:#eef5f7;border:1px solid #cfe0e4;
+    padding:7px 12px;border-radius:8px}
+  a.maproute:hover{background:#e2eef1}
+
+  .hike{margin-top:14px;padding:14px 16px;border-radius:12px;background:#eef3ea;border:1px solid #d3e0ca}
+  .hike .h-top{display:flex;align-items:center;gap:8px;font-family:Georgia,serif;color:var(--sage-d);font-size:1.02rem;margin-bottom:5px}
+  .hike .h-top .em{font-size:1.25rem}
+  .hike p{margin:0 0 8px;font-size:.88rem;color:#46553c}
+
+  .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px}
+  .chip{font-size:.7rem;padding:4px 11px;border-radius:20px;border:1px solid var(--line);color:var(--muted);background:#fff}
+  .chip.foto{color:#5560a0;border-color:#dfe2f0}
+  .chip.lit{color:#8a6d3b;border-color:#ecddbf}
+  .chip.nerd{color:var(--blue-d);border-color:#cfe0e4}
+  .chip.food{color:#9a5e44;border-color:#f0ddd0}
+  .chip.nat{color:var(--sage-d);border-color:#dbe6d6}
+  .char{margin-top:14px;font-style:italic;color:var(--muted);font-size:.9rem}
+
+  .planb{display:flex;gap:11px;margin-top:14px;padding:12px 15px;border-radius:10px;background:#eef3f5;border:1px solid #d9e4e8}
+  .planb .pb-ico{font-size:1.2rem;line-height:1.4;flex:none}
+  .planb .pb-txt{font-size:.88rem;color:#3c545e}
+  .planb .pb-txt b{color:var(--blue-d);display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+
+  footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);text-align:center}
+  footer a{color:var(--blue-d)}
+
+  /* Modal / popout */
+  .m-overlay{position:fixed;inset:0;background:rgba(28,33,38,.55);display:none;z-index:100;
+    align-items:center;justify-content:center;padding:20px;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+  .m-overlay.open{display:flex}
+  .m-card{background:var(--paper);border-radius:16px;max-width:460px;width:100%;max-height:88vh;
+    overflow:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.3);-webkit-overflow-scrolling:touch}
+  .m-close{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;border:none;
+    background:rgba(255,255,255,.9);font-size:1.5rem;line-height:1;cursor:pointer;color:#444;z-index:2;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+  .m-img{display:block}
+  .m-img img{width:100%;height:220px;object-fit:cover;display:block;border-radius:16px 16px 0 0;background:var(--soft)}
+  .m-pad{padding:20px 22px 24px}
+  .m-eyebrow{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-d);margin:0 0 4px}
+  .m-title{margin:0 0 10px;color:var(--blue-d);font-size:1.35rem;line-height:1.2}
+  .m-blurb{margin:0 0 18px;font-size:.95rem;line-height:1.6}
+  .m-links{display:flex;flex-wrap:wrap;gap:10px}
+  .m-btn{flex:1;min-width:150px;text-align:center;text-decoration:none;background:var(--blue);color:#fff;
+    padding:12px 14px;border-radius:10px;font-size:.88rem}
+  .m-btn.ghost{background:#fff;color:var(--blue-d);border:1px solid var(--blue)}
+  .m-btn:active{transform:translateY(1px)}
+
+  /* ---- Mobile ---- */
+  @media (max-width:600px){
+    body{font-size:15.5px}
+    .wrap{padding:0 15px 70px}
+    header.hero{padding:46px 18px 40px}
+    header.hero h1{font-size:1.95rem}
+    header.hero p.sub{font-size:.98rem}
+    section{margin-top:34px}
+    h2.section-title{font-size:1.3rem}
+    .facts{grid-template-columns:1fr 1fr;gap:10px}
+    .fact{padding:13px 14px}
+    .day-head{padding:16px 16px 12px;gap:12px}
+    .daynum{width:50px;height:50px}
+    .daynum .d{font-size:1.2rem}
+    .day-head h3{font-size:1.1rem}
+    .wx,.transfer-banner{padding-left:16px;padding-right:16px}
+    .wx .tag{margin-left:0}
+    .day-body{padding:16px 16px 20px}
+    ul.acts li{padding-left:22px}
+
+    /* transfer table -> cards */
+    .transfers table,.transfers thead,.transfers tbody,.transfers tr,.transfers td{display:block;width:100%}
+    .transfers thead{display:none}
+    .transfers tr{padding:12px 16px;border-bottom:1px solid var(--line)}
+    .transfers tr:last-child{border-bottom:none}
+    .ferry-row td{background:transparent}
+    .transfers td{border:none;padding:3px 0}
+    .transfers td::before{content:attr(data-label);display:block;font-size:.64rem;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+    .transfers .km{font-size:1rem}
+  }
+  @media (max-width:560px){
+    .m-overlay{align-items:flex-end;padding:0}
+    .m-card{max-width:none;border-radius:18px 18px 0 0;max-height:90vh}
+    .m-img img{height:180px;border-radius:18px 18px 0 0}
+    .m-btn{flex:1 1 100%}
+  }
+  @media (max-width:380px){ .facts{grid-template-columns:1fr} }
+
+  @media print{
+    body{background:#fff;font-size:12px}
+    header.hero{background:#41606e!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .day,.transfers,.fact,.wx,.transfer-banner,.planb,.hike{break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .place::after{content:""}.place{border:none;color:var(--ink)}
+    a.maproute,.m-overlay{display:none!important}
+    .wrap{padding-bottom:20px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="kicker">Auto-Rundreise · Paarreise</p>
+  <h1>Südschweden</h1>
+  <p class="sub">Natur, gutes Essen, besondere Orte, Literatur &amp; Fotografie –
+  von Gränna über Småland und Öland bis nach Österlen.</p>
+  <p class="dates">24. Juni – 8. Juli 2026 · ab/bis Trelleborg · 15 Tage</p>
+</header>
+
+<div class="wrap">
+
+  <section id="ueberblick">
+    <h2 class="section-title">Überblick</h2>
+    <p class="lead">Vier Standorte, ein roter Faden: ruhige Naturerlebnisse, schöne kleine Orte
+    und genug Raum für Pausen. <b>Tipp:</b> Auf unterstrichene Orte tippen für Infos, Bild &amp; Karte.</p>
+    <div class="facts">
+      <div class="fact"><div class="lbl">Reisezeitraum</div><div class="val">24.06 – 08.07<br><small>2026 · 15 Tage</small></div></div>
+      <div class="fact"><div class="lbl">Anreise</div><div class="val">Rostock&nbsp;→&nbsp;Trelleborg<br><small>24.06 · 07:45 – 14:45</small></div></div>
+      <div class="fact"><div class="lbl">Abreise</div><div class="val">Trelleborg&nbsp;→&nbsp;Rostock<br><small>08.07 · 15:15 – 22:15</small></div></div>
+      <div class="fact"><div class="lbl">Unterkünfte</div><div class="val">4 Standorte<br><small>Gränna · Vimmerby · Öland · Österlen</small></div></div>
+    </div>
+  </section>
+
+  <section id="fahrzeiten">
+    <h2 class="section-title">Standorte &amp; Fahrzeiten</h2>
+    <p class="lead">Fahrzeiten der Unterkunftswechsel (inkl. Zwischenstopps) und der An-/Abreise.
+    Werte gerundet, reine Fahrzeit ohne Pausen.</p>
+    <div class="transfers">
+      <table>
+        <thead><tr><th>Datum</th><th>Etappe</th><th>Strecke</th><th>Übernachtung</th></tr></thead>
+        <tbody>
+          <tr class="ferry-row">
+            <td data-label="Datum">24.06</td>
+            <td data-label="Etappe" class="route">⛴ Rostock → Trelleborg, dann <b>Trelleborg → Gränna</b></td>
+            <td data-label="Strecke" class="km">≈ 360 km · 4,0 h</td>
+            <td data-label="Übernachtung">Gränna <small>· Bergsgatan 80A</small></td>
+          </tr>
+          <tr>
+            <td data-label="Datum">26.06</td>
+            <td data-label="Etappe" class="route"><b>Gränna → Vimmerby</b> über Eksjö</td>
+            <td data-label="Strecke" class="km">≈ 126 km · 2,2 h</td>
+            <td data-label="Übernachtung">Vimmerby <small>· Blägda 140</small></td>
+          </tr>
+          <tr>
+            <td data-label="Datum">30.06</td>
+            <td data-label="Etappe" class="route"><b>Vimmerby → Färjestaden</b> über Kalmar &amp; Ölandbrücke</td>
+            <td data-label="Strecke" class="km">≈ 151 km · 2,4 h</td>
+            <td data-label="Übernachtung">Färjestaden / Öland <small>· Törnbottenvägen 15</small></td>
+          </tr>
+          <tr>
+            <td data-label="Datum">04.07</td>
+            <td data-label="Etappe" class="route"><b>Färjestaden → Smedstorp</b> (Österlen)</td>
+            <td data-label="Strecke" class="km">≈ 273 km · 3,7 h</td>
+            <td data-label="Übernachtung">Tomelilla / Österlen <small>· Tjustorp 1523</small></td>
+          </tr>
+          <tr class="ferry-row">
+            <td data-label="Datum">08.07</td>
+            <td data-label="Etappe" class="route"><b>Smedstorp → Trelleborg</b>, dann ⛴ Rostock</td>
+            <td data-label="Strecke" class="km">≈ 89 km · 1,4 h</td>
+            <td data-label="Übernachtung">— Rückreise</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legend">
+      <span>☀️ Klar &nbsp; 🌤️ Heiter &nbsp; ⛅ Wolkig &nbsp; ☁️ Bedeckt &nbsp; 🌦️ Niesel/Schauer &nbsp; 🌧️ Regen</span>
+      <span>👟 = festes Schuhwerk empfohlen</span>
+    </div>
+    <div class="note" id="wx-note">
+      <b>Zum Wetter – ruhig bleiben:</b> Die Vorhersage wird beim Öffnen der Seite live von
+      <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> geladen
+      (<span id="wx-updated">wird geladen …</span>).
+      Werte können sich täglich verschieben – für graue Tage hat jeder Tag unten einen <b>„Bei Regen"-Plan B</b>.
+    </div>
+    <div class="note" id="wx-strategy" style="border-color:var(--sage);background:#eef3ea;color:#46553c;display:none">
+      <b>Strategie statt Sorge:</b> <span id="wx-strategy-text"></span>
+    </div>
+  </section>
+
+  <section id="tage">
+    <h2 class="section-title">Tag für Tag</h2>
+    <p class="lead">Aktivitäten kuratiert und ergänzt – <span class="badge b-tip">Tipp</span> markiert neue Empfehlungen.
+    Orte mit Linie sind antippbar (Infos · Bild · Karte). Das Wetter gilt für den Übernachtungsort.</p>
+
+    <!-- 24.06 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">24</span><span class="m">Juni</span></div>
+        <div class="titles"><div class="wd">Mittwoch · Anreise</div>
+          <h3>Ankommen in Gränna am Vättern</h3>
+          <span class="stay">Übernachtung: Gränna</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-06-24" data-wx-lat="58.0242" data-wx-lon="14.4681">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">🚗</span><span>Nach Fährankunft (≈14:45) <b>Trelleborg → Gränna · ≈ 360 km / 4,0 h</b> – heute kein großes Programm.</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Ankommen, Unterkunft beziehen, durchatmen</li>
+          <li>Bummel durch <button class="place" data-k="granna">Gränna</button>; <span class="badge b-tip">Tipp</span> Polkagris-Schauproduktion (Zuckerstangen werden live von Hand gezogen)</li>
+          <li><span class="badge b-tip">Tipp</span> kurzer Aufstieg an den Hängen oberhalb der Stadt für den weiten Vätternblick Richtung Visingsö</li>
+          <li class="eve"><span class="badge b-food">Essen</span> Abendessen am Hafen mit Seeblick</li>
+          <li class="eve">Sonnenuntergang am Vätternhafen fotografieren (Sonne erst ~22:09)</li>
+        </ul>
+        <div class="tags"><span class="chip foto">Fotografie</span><span class="chip food">Genuss</span></div>
+        <p class="char">Ruhiger Start, kein Stress – erstes Schweden-Gefühl.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Die Polkagris-Schauproduktion ist überdacht; dazu das <button class="place" data-k="grenna-museum">Grenna Museum</button> (Andrées Polarexpedition) und ein langes Abendessen.</span></div>
+      </div>
+    </div>
+
+    <!-- 25.06 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">25</span><span class="m">Juni</span></div>
+        <div class="titles"><div class="wd">Donnerstag</div>
+          <h3>Visingsö – entschleunigter Inseltag</h3>
+          <span class="stay">Übernachtung: Gränna</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-06-25" data-wx-lat="58.0242" data-wx-lon="14.4681">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Fähre Gränna → <button class="place" data-k="visingso">Visingsö</button> (ca. 25 Min, regelmäßig)</li>
+          <li><span class="badge b-tip">Tipp</span> Insel per Mietfahrrad – oder klassisch mit dem <b>„Remmalag"</b>, den traditionellen Pferdekutschen am Hafen</li>
+          <li><button class="place" data-k="visingsborg">Schlossruine Visingsborg</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> und die <button class="place" data-k="brahekyrkan">Brahekyrkan</button></li>
+          <li>Ekenäs-Eichenwälder – einst für die Marine gepflanzt, heute stille alte Baumriesen</li>
+          <li><span class="badge b-food">Essen</span> Picknick oder Cafépause (Visingsö-Glass)</li>
+          <li class="eve">Rückfahrt, Abend am Vättern</li>
+        </ul>
+        <div class="tags"><span class="chip foto">Fähre · alte Eichen · Abendlicht</span><span class="chip lit">nostalgisch-historisch</span></div>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Visingsö ist Outdoor – bei Dauerregen mit dem Bullerbü-Tag (28.06) tauschen, oder kurz hinüber für Brahekyrkan &amp; Inselcafé und sonst das Grenna Museum.</span></div>
+      </div>
+    </div>
+
+    <!-- 26.06 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">26</span><span class="m">Juni</span></div>
+        <div class="titles"><div class="wd">Freitag · Standortwechsel</div>
+          <h3>Über die Holzstadt Eksjö nach Vimmerby</h3>
+          <span class="stay">Übernachtung: Vimmerby</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-06-26" data-wx-lat="57.6664" data-wx-lon="15.8569">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">🚗</span><span><b>Gränna → Eksjö → Vimmerby · ≈ 126 km / 2,2 h</b></span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Vormittags entspannt aus Gränna abfahren</li>
+          <li>Stopp in <button class="place" data-k="eksjo">Eksjö</button> – eine der besterhaltenen Holzstädte Schwedens; Altstadtbummel über Kopfsteinpflaster</li>
+          <li><span class="badge b-food">Essen</span> Café in der Altstadt</li>
+          <li><span class="badge b-tip">Tipp</span> wer Lust auf Natur hat: Abstecher zur <button class="place" data-k="skurugata">Skurugata</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – eine dramatische Felsschlucht im Wald</li>
+          <li class="eve">Weiter nach Vimmerby, Unterkunft beziehen, ruhiger Abend</li>
+        </ul>
+        <div class="tags"><span class="chip">Ortswechsel</span><span class="chip nat">Natur optional</span><span class="chip foto">Holzhäuser</span></div>
+        <p class="char">Kombination aus Ortswechsel und leichtem Sightseeing – nicht überladen.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Eksjös Altstadt lässt sich unter den Arkaden bummeln; dazu das kleine Eksjö Museum und ein Café. Die Skurugata-Schlucht dann auslassen.</span></div>
+      </div>
+    </div>
+
+    <!-- 27.06 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">27</span><span class="m">Juni</span></div>
+        <div class="titles"><div class="wd">Samstag</div>
+          <h3>Astrid Lindgren literarisch &amp; erwachsen</h3>
+          <span class="stay">Übernachtung: Vimmerby</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-06-27" data-wx-lat="57.6664" data-wx-lon="15.8569">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li><button class="place" data-k="astrid-naes">Astrid Lindgrens Näs</button>: Geburtshaus, Garten und Ausstellung – die Autorin als literarische Stimme, nicht als Kinderprogramm</li>
+          <li>Spaziergang durch Vimmerby, Zeit für Café oder Buchladen</li>
+          <li><span class="badge b-tip">Tipp</span> Regentag-tauglich: Museum &amp; ein gemütlicher Lesenachmittag passen gut zum Wetter</li>
+          <li class="eve"><span class="badge b-food">Essen</span> gutes Abendessen oder ruhiger Unterkunftsabend</li>
+        </ul>
+        <div class="tags"><span class="chip lit">Astrid Lindgren</span><span class="chip">Erholung</span></div>
+        <p class="char">Kein voller Freizeitpark-Tag – lieber bewusst langsam und atmosphärisch.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Idealer Schlechtwettertag – Näs-Ausstellung, Buchladen und Café sind drinnen. Wer mehr will: Abstecher ins <button class="place" data-k="kosta-boda">Glasreich (Kosta Boda)</button>.</span></div>
+      </div>
+    </div>
+
+    <!-- 28.06 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">28</span><span class="m">Juni</span></div>
+        <div class="titles"><div class="wd">Sonntag</div>
+          <h3>Bullerbü, Katthult &amp; Småland-Landschaft</h3>
+          <span class="stay">Übernachtung: Vimmerby</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-06-28" data-wx-lat="57.6664" data-wx-lon="15.8569">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">📍</span><span>Tagesausflug auf kleinen Landstraßen: Vimmerby → Sevedstorp → Gibberyd → zurück</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li><button class="place" data-k="bullerbu">Sevedstorp / Bullerbü</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – die drei roten Höfe aus den Bullerbü-Filmen</li>
+          <li><button class="place" data-k="katthult">Katthult in Gibberyd</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span>, der Hof aus „Michel aus Lönneberga" – <span class="badge b-tip">Tipp</span> oft mit Hofcafé</li>
+          <li><span class="badge b-tip">Tipp</span> bewusst über kleine Grus- (Schotter-)Straßen fahren und an einem See halten – die Småland-Atmosphäre ist hier der eigentliche Star
+            <br><a class="maproute" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=57.6664,15.8569&destination=57.6664,15.8569&waypoints=57.61194,15.67139%7C57.68970,15.55270&travelmode=driving">🗺️ Schotterstraßen-Runde in Google Maps</a></li>
+          <li><span class="badge b-food">Essen</span> Picknick oder Cafépause unterwegs</li>
+        </ul>
+        <div class="tags"><span class="chip foto">rote Holzhäuser · Wiesen · Zäune</span><span class="chip lit">Lindgren-Drehorte</span></div>
+        <p class="char">Sanft, nostalgisch, schön für langsames Entdecken – keine Stopps erzwingen.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Bullerbü lebt vom schönen Wetter – bei Regen mit dem Näs-Tag (27.06) tauschen, oder stattdessen ins <button class="place" data-k="kosta-boda">Glasreich</button> bzw. zur Erlebnisburg <button class="place" data-k="boda-borg">Boda Borg</button> (Rätselräume).</span></div>
+      </div>
+    </div>
+
+    <!-- 29.06 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">29</span><span class="m">Juni</span></div>
+        <div class="titles"><div class="wd">Montag</div>
+          <h3>Västervik &amp; die Schärenküste</h3>
+          <span class="stay">Übernachtung: Vimmerby</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-06-29" data-wx-lat="57.6664" data-wx-lon="15.8569">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">📍</span><span>Tagesausflug ans Wasser: Vimmerby → Västervik → zurück</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Hafen &amp; Altstadt von <button class="place" data-k="vastervik">Västervik</button> (kleine Holzhäuser rund um die Båtgatan)</li>
+          <li><span class="badge b-tip">Tipp</span> <button class="place" data-k="hasselo">Schärenbootstour</button> hinaus zu den Inseln – oder Aussicht vom <button class="place" data-k="skansberget">Skansberget</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> über die Schären</li>
+          <li class="eve"><span class="badge b-food">Essen</span> frischer Fisch am Hafen</li>
+          <li class="eve"><span class="badge b-tip">Tipp</span> abends bewusst ein ruhiger <b>Spieleabend</b> – der Ausflug heute ist leicht genug dafür</li>
+        </ul>
+        <div class="tags"><span class="chip foto">Hafen · Boote · Wasserlicht</span><span class="chip nerd">Spieleabend</span><span class="chip food">Fisch</span></div>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Die Schärenbootstour braucht gutes Wetter – bei Regen Hafencafés &amp; Stadtbummel verkürzen und den <b>Spieleabend</b> nach vorne ziehen.</span></div>
+      </div>
+    </div>
+
+    <!-- 30.06 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">30</span><span class="m">Juni</span></div>
+        <div class="titles"><div class="wd">Dienstag · Standortwechsel</div>
+          <h3>Über Kalmar &amp; die Ölandbrücke nach Öland</h3>
+          <span class="stay">Übernachtung: Färjestaden / Öland</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-06-30" data-wx-lat="56.6503" data-wx-lon="16.4686">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">🚗</span><span><b>Vimmerby → Kalmar → Färjestaden · ≈ 151 km / 2,4 h</b> · heiß heute – viel Wasser einpacken</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li><button class="place" data-k="kalmar-slott">Kalmar Schloss</button> – Renaissance-Wasserschloss, wirkt wie eine reale Fantasy-Festung (bester Nerd-Stopp der Reise)</li>
+          <li>Kalmars Altstadt „Gamla stan" und der Dom</li>
+          <li><span class="badge b-food">Essen</span> <span class="badge b-tip">Tipp</span> Mittag am Larmtorget in Kalmar</li>
+          <li>Über die 6&nbsp;km lange <button class="place" data-k="olandsbron">Ölandbrücke</button> nach Färjestaden <span class="badge b-tip">Tipp</span> Fotostopp am Brückenkopf</li>
+          <li class="eve">Unterkunft beziehen, kurzer Abendspaziergang an der Küste</li>
+        </ul>
+        <div class="tags"><span class="chip nerd">Kalmar Schloss</span><span class="chip foto">Brücke · Festung</span></div>
+        <div class="planb"><span class="pb-ico">☀️</span><span class="pb-txt"><b>Wetter-Bonus</b>
+          Sonniges Hoch – falls die Hitze zu viel wird, kühlt das <button class="place" data-k="kronan-museum">Kalmar läns museum</button> mit der Kronan-Wrackausstellung (indoor &amp; nerdig) angenehm ab.</span></div>
+      </div>
+    </div>
+
+    <!-- 01.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">01</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Mittwoch</div>
+          <h3>Süd-Öland: Stora Alvaret, Ottenby &amp; Långe Jan</h3>
+          <span class="stay">Übernachtung: Färjestaden / Öland</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-01" data-wx-lat="56.6503" data-wx-lon="16.4686">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li><span class="badge b-tip">Tipp</span> früh starten – wegen Hitze und des weichen Morgenlichts in der Weite</li>
+          <li><button class="place" data-k="stora-alvaret">Stora Alvaret</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – die karge UNESCO-Welterbe-Kalksteppe</li>
+          <li>Optional <button class="place" data-k="eketorp">Eketorp</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span>, die rekonstruierte Ringburg (Geschichte &amp; Nerd-Faktor)</li>
+          <li><button class="place" data-k="ottenby">Ottenby</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> &amp; <button class="place" data-k="lange-jan">Långe Jan</button>, Schwedens höchster Leuchtturm, mit Vogelstation</li>
+          <li class="eve"><span class="badge b-food">Essen</span> <span class="badge b-tip">Tipp</span> Öland-Lamm probieren (z.&nbsp;B. am Naturum Ottenby)</li>
+        </ul>
+        <div class="tags"><span class="chip foto">Weite · Kalksteppe · Leuchtturm</span><span class="chip nat">Vögel &amp; Küste</span><span class="chip nerd">Eketorp</span></div>
+        <p class="char">Weit, ruhig, naturbetont – besonders schön im Abendlicht.</p>
+        <div class="planb"><span class="pb-ico">☀️</span><span class="pb-txt"><b>Sonnentag nutzen!</b>
+          Laut Prognose der beste Tag der Reise – genau richtig für die Weite von Süd-Öland. Bei Wetterumschwung bieten Eketorp und das Naturum Ottenby Schutz.</span></div>
+      </div>
+    </div>
+
+    <!-- 02.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">02</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Donnerstag</div>
+          <h3>Borgholm – Schlossruine &amp; Solliden</h3>
+          <span class="stay">Übernachtung: Färjestaden / Öland</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-02" data-wx-lat="56.6503" data-wx-lon="16.4686">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li><button class="place" data-k="borgholms-slott">Borgholms Schlossruine</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – mächtige Ruine über der Stadt, starkes Fotomotiv</li>
+          <li><button class="place" data-k="solliden">Solliden</button>, der königliche Sommersitz mit seinen Parkanlagen</li>
+          <li>Spaziergang durch Borgholm und am Hafen</li>
+          <li class="eve"><span class="badge b-food">Essen</span> gutes Essen am Hafen; <span class="badge b-tip">Tipp</span> Sonnenuntergang an der Westküste bei Köpingsvik</li>
+        </ul>
+        <div class="tags"><span class="chip foto">Schlossruine · Park · Hafen</span><span class="chip food">Genuss</span></div>
+        <p class="char">Klassisch, schön, nicht zu anstrengend.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen / Wind</b>
+          Solliden hat Gewächshäuser &amp; Café; alternativ das <button class="place" data-k="kronan-museum">Kalmar läns museum (Kronan)</button> oder das teils überdachte Freilichtmuseum <button class="place" data-k="himmelsberga">Himmelsberga</button>.</span></div>
+      </div>
+    </div>
+
+    <!-- 03.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">03</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Freitag</div>
+          <h3>Nord-Öland: Byrums Raukar &amp; Neptuni Åkrar</h3>
+          <span class="stay">Übernachtung: Färjestaden / Öland</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-03" data-wx-lat="56.6503" data-wx-lon="16.4686">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">📍</span><span>Weiterer Tagesausflug nach Norden – früh starten</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li><span class="badge b-tip">Tipp</span> früh los, der Norden ist weiter; bewölkt-windiges Wetter passt gut zur rauen Küste</li>
+          <li><button class="place" data-k="byrums-raukar">Byrums Raukar</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – bizarre Kalksteinsäulen direkt am Strand</li>
+          <li><button class="place" data-k="neptuni-akrar">Neptuni Åkrar</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – Steinwall und (je nach Saison) blau-violette Natternkopf-Felder</li>
+          <li>Optional <button class="place" data-k="lange-erik">Långe Erik</button>, der Nordleuchtturm</li>
+          <li class="eve"><span class="badge b-food">Essen</span> <span class="badge b-tip">Tipp</span> Einkehr in Sandvik / Köpingsvik; Pausen einplanen, nicht hetzen</li>
+        </ul>
+        <div class="tags"><span class="chip foto">Felsformationen · karge Küste</span><span class="chip lit">Theorins Öland-Krimis</span><span class="chip nerd">Raukar</span></div>
+        <div class="planb"><span class="pb-ico">🌥️</span><span class="pb-txt"><b>Wetter passt</b>
+          Bedeckt-windig macht die rauen Raukar &amp; die karge Küste sogar dramatischer – ideales Theorin-Krimi-Wetter. Nur bei Dauerregen lieber Borgholm-Indoor oder das Kalmar-Museum.</span></div>
+      </div>
+    </div>
+
+    <!-- 04.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">04</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Samstag · Standortwechsel</div>
+          <h3>Von Öland nach Österlen</h3>
+          <span class="stay">Übernachtung: Tomelilla / Österlen</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-04" data-wx-lat="55.543" data-wx-lon="13.954">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">🚗</span><span><b>Färjestaden → Smedstorp · ≈ 273 km / 3,7 h</b> – längster Fahrtag, bewusst ruhig planen</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Nicht zu spät losfahren</li>
+          <li><span class="badge b-tip">Tipp</span> optionaler Stopp in <b>Karlskrona</b> (UNESCO-Marinestadt) – lohnt mehr als Kristianstad, aber nur bei Energie/Wetter</li>
+          <li class="eve">Unterkunft beziehen, einkaufen, ankommen</li>
+        </ul>
+        <div class="tags"><span class="chip">Reisetag</span></div>
+        <p class="char">Reisetag, kein voller Ausflugstag.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Statt Stadtbummel das <button class="place" data-k="karlskrona-marinmuseum">Marinmuseum Karlskrona</button> (Top-Indoor-Museum, U-Boot &amp; Schiffe, freier Eintritt) als trockener Zwischenstopp.</span></div>
+      </div>
+    </div>
+
+    <!-- 05.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">05</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Sonntag</div>
+          <h3>Ales Stenar &amp; Kåseberga</h3>
+          <span class="stay">Übernachtung: Tomelilla / Österlen</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-05" data-wx-lat="55.543" data-wx-lon="13.954">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li><button class="place" data-k="ales-stenar">Ales Stenar</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – die 59 Steine umfassende Schiffssetzung hoch über dem Meer, mythische Stimmung</li>
+          <li><button class="place" data-k="kaseberga">Kåseberga Hafen</button>; <span class="badge b-food">Essen</span> <span class="badge b-tip">Tipp</span> geräucherter Fisch direkt aus der Hafen-Rökeri</li>
+          <li>Kleine Küstenwanderung entlang der Klippen vom Hafen hinauf zu den Steinen
+            <br><a class="maproute" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=55.3831,14.0650&destination=55.382746,14.054252&travelmode=walking">🗺️ Küstenweg Kåseberga → Ales Stenar (zu Fuß)</a></li>
+          <li class="eve">Wenn möglich Sonnenuntergang an den Steinen – das stärkste Licht des Tages</li>
+        </ul>
+        <div class="tags"><span class="chip foto">Steine · Meer · Abendlicht</span><span class="chip nerd">Mystik</span><span class="chip food">Räucherfisch</span></div>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Ales Stenar wirkt bei dramatischem Himmel fast noch stärker – Regenjacke genügt. Bei Dauerregen: <button class="place" data-k="glimmingehus">Glimmingehus</button> (besterhaltene mittelalterliche Burg Skandinaviens) plus Räucherfisch in Kåseberga.</span></div>
+      </div>
+    </div>
+
+    <!-- 06.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">06</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Montag</div>
+          <h3>Stenshuvud, Kivik &amp; Simrishamn</h3>
+          <span class="stay">Übernachtung: Tomelilla / Österlen</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-06" data-wx-lat="55.543" data-wx-lon="13.954">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Vormittags <button class="place" data-k="stenshuvud">Stenshuvud Nationalpark</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span> – Wanderung zum Gipfel mit Meerblick, dazu Strand/Badebucht</li>
+          <li><b>Kivik</b>, das Apfel-Herz Österlens: <span class="badge b-tip">Tipp</span> <button class="place" data-k="kivik-musteri">Kivik Musteri</button> (Hofladen &amp; Verkostung) und <span class="badge b-tip">Tipp</span> das bronzezeitliche <button class="place" data-k="kungagraven">Kungagraven</button><span class="boot" title="Festes Schuhwerk empfohlen">👟</span></li>
+          <li class="eve"><button class="place" data-k="simrishamn">Simrishamn</button>: Hafen, Altstadt; <span class="badge b-food">Essen</span> Abendessen am Wasser</li>
+        </ul>
+        <div class="hike">
+          <div class="h-top"><span class="em">🥾</span> Wanderung des Tages: Stenshuvud-Gipfel</div>
+          <p>Vom Naturum (Parkplatz) über Wald- und Felspfade hinauf zum kahlen Granitgipfel – rund 4 km hin &amp; zurück, gut 1,5–2 h mit Pausen, moderat aber teils steil &amp; wurzelig. Oben weiter Blick über die Ostsee, bei klarer Sicht bis Bornholm. <b>Festes Schuhwerk nötig.</b></p>
+          <a class="maproute" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=55.6589,14.2606&destination=55.663056,14.272778&travelmode=walking">🗺️ Wanderroute Naturum → Gipfel</a>
+        </div>
+        <div class="tags"><span class="chip nat">Nationalpark · Küste</span><span class="chip foto">Aussicht · Hafen</span><span class="chip nerd">Kungagraven</span><span class="chip food">Apfelregion</span></div>
+        <p class="char">Idealer Tag, um Natur und Genuss zu verbinden.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Gipfel-Wanderung sparen und auf Genuss &amp; Kultur umschwenken: Kivik Musteri (Verkostung indoor), <button class="place" data-k="glimmingehus">Glimmingehus</button>, das Österlens Museum in Simrishamn und die Galerien der Region.</span></div>
+      </div>
+    </div>
+
+    <!-- 07.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">07</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Dienstag · letzter voller Tag</div>
+          <h3>Ystad &amp; ruhiger Abschluss</h3>
+          <span class="stay">Übernachtung: Tomelilla / Österlen</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-07" data-wx-lat="55.543" data-wx-lon="13.954">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Vormittags <button class="place" data-k="ystad">Ystads Altstadt</button>: Fachwerkhäuser, der Stortorget und das Gråbrödra-Kloster</li>
+          <li><span class="badge b-tip">Tipp</span> Wallander-Bezug für Krimifans – Drehorte und die <button class="place" data-k="ystad-studios">Ystad Studios</button> (Henning Mankell)</li>
+          <li><span class="badge b-food">Essen</span> Café oder Mittagessen in den Gassen</li>
+          <li>Nachmittags Strand (Sandskogen) oder ruhiger Rückzug</li>
+          <li class="eve"><span class="badge b-food">Essen</span> schönes Abschiedsessen</li>
+        </ul>
+        <div class="tags"><span class="chip lit">Wallander / Mankell</span><span class="chip">Erholung</span><span class="chip foto">Fachwerk</span></div>
+        <p class="char">Klassisch, charmant und bewusst ruhig als Abschluss.</p>
+        <div class="planb"><span class="pb-ico">☔</span><span class="pb-txt"><b>Bei Regen</b>
+          Perfekter Regentag-Abschluss: die <button class="place" data-k="ystad-studios">Ystad Studios</button> (Wallander-Kulissen, indoor), das Kloster, das Kunstmuseum und gemütliche Cafés in den Gassen.</span></div>
+      </div>
+    </div>
+
+    <!-- 08.07 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="daynum"><span class="d">08</span><span class="m">Juli</span></div>
+        <div class="titles"><div class="wd">Mittwoch · Abreise</div>
+          <h3>Rückreise nach Trelleborg</h3>
+          <span class="stay">Fähre 15:15 ab Trelleborg</span></div>
+      </div>
+      <div class="wx loading" data-wx-date="2026-07-08" data-wx-lat="55.3757" data-wx-lon="13.1569">
+        <span class="ico">⏳</span><span class="temp">…</span>
+        <span class="cond">Wetter wird geladen</span><span class="meta"></span>
+        <span class="tag fc">Vorhersage</span></div>
+      <div class="transfer-banner"><span class="pin">🚗</span><span><b>Smedstorp → Trelleborg · ≈ 89 km / 1,4 h</b>, dann ⛴ Fähre 15:15 – Puffer einplanen</span></div>
+      <div class="day-body">
+        <ul class="acts">
+          <li>Gemütlich frühstücken</li>
+          <li>Rechtzeitig packen und losfahren, etwas Zeitpuffer vor dem Check-in</li>
+          <li>Kein großes Programm mehr</li>
+        </ul>
+        <p class="char">Entspannter Ausklang einer ruhigen, vollen Reise.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="fazit">
+    <h2 class="section-title">Roter Faden</h2>
+    <p class="lead">Alle wichtigen Klassiker sind dabei – Kalmar Schloss, Öland, Borgholm, Långe Jan,
+    Ales Stenar, Stenshuvud, Ystad – und dazwischen viel Raum für ruhigere Momente:
+    Visingsö, Småland, Schärenküste, Nord-Öland und Österlen.</p>
+    <div class="facts">
+      <div class="fact"><div class="lbl">Beste Fototage</div><div class="val" style="font-size:.95rem;line-height:1.5">25.06 Visingsö · 28.06 Bullerbü · 01.07 Süd-Öland · 03.07 Nord-Öland · 05.07 Ales Stenar · 06.07 Stenshuvud</div></div>
+      <div class="fact"><div class="lbl">Literatur</div><div class="val" style="font-size:.95rem;line-height:1.5">Astrid Lindgrens Näs · Bullerbü/Katthult · Theorins Öland · Wallander / Mankell in Ystad</div></div>
+      <div class="fact"><div class="lbl">Für den Nerd</div><div class="val" style="font-size:.95rem;line-height:1.5">Kalmar Schloss · Ales Stenar · Byrums Raukar · Stora Alvaret · Eketorp · Boda Borg</div></div>
+      <div class="fact"><div class="lbl">Wichtig</div><div class="val" style="font-size:.95rem;line-height:1.5">Nicht jeden Tag bis zum Maximum füllen – der Reiz liegt in der Kombination aus Landschaft, kleinen Orten und Pausen.</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Erstellt 18.06.2026 · Wetter: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
+    (<span id="wx-footer-updated">live beim Laden</span>) ·
+    Fahrzeiten: OSRM · Ortsbilder &amp; Infos: Wikimedia/Wikipedia.<br>
+    Vorhersagewerte werden mit näherrückendem Reisedatum verlässlicher – Seite neu laden für aktuelle Daten.</p>
+  </footer>
+
+</div>
+
+<!-- Popout -->
+<div id="modal" class="m-overlay" aria-hidden="true">
+  <div class="m-card" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="m-close" aria-label="Schließen">&times;</button>
+    <div class="m-img"><img alt=""></div>
+    <div class="m-pad">
+      <p class="m-eyebrow">Ort</p>
+      <h3 class="m-title serif" id="m-title"></h3>
+      <p class="m-blurb"></p>
+      <div class="m-links"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const WX = {
+    codes: {
+      0:{ico:'☀️',cond:'Klar'},
+      1:{ico:'🌤️',cond:'Heiter'},
+      2:{ico:'⛅',cond:'Teils sonnig'},
+      3:{ico:'☁️',cond:'Bedeckt'},
+      45:{ico:'🌫️',cond:'Nebel'},
+      48:{ico:'🌫️',cond:'Reifnebel'},
+      51:{ico:'🌦️',cond:'Leichter Niesel'},
+      53:{ico:'🌦️',cond:'Nieselregen'},
+      55:{ico:'🌦️',cond:'Starker Niesel'},
+      56:{ico:'🌦️',cond:'Gefrierender Niesel'},
+      57:{ico:'🌦️',cond:'Starker gefr. Niesel'},
+      61:{ico:'🌧️',cond:'Leichter Regen'},
+      63:{ico:'🌧️',cond:'Regen'},
+      65:{ico:'🌧️',cond:'Starker Regen'},
+      66:{ico:'🌧️',cond:'Gefrierender Regen'},
+      67:{ico:'🌧️',cond:'Starker gefr. Regen'},
+      71:{ico:'🌨️',cond:'Leichter Schneefall'},
+      73:{ico:'🌨️',cond:'Schneefall'},
+      75:{ico:'🌨️',cond:'Starker Schneefall'},
+      77:{ico:'🌨️',cond:'Schneegriesel'},
+      80:{ico:'🌦️',cond:'Leichte Schauer'},
+      81:{ico:'🌦️',cond:'Schauer'},
+      82:{ico:'🌧️',cond:'Starke Schauer'},
+      85:{ico:'🌨️',cond:'Schneeschauer'},
+      86:{ico:'🌨️',cond:'Starke Schneeschauer'},
+      95:{ico:'⛈️',cond:'Gewitter'},
+      96:{ico:'⛈️',cond:'Gewitter mit Hagel'},
+      99:{ico:'⛈️',cond:'Schweres Gewitter'}
+    },
+    fmtTime(iso){
+      if(!iso) return '';
+      const p = iso.split('T')[1];
+      return p ? p.slice(0,5) : '';
+    },
+    fmtDate(d){
+      return d.toLocaleString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    },
+    describe(code, hi, lo, rain, wind){
+      const base = (WX.codes[code] || {ico:'⛅',cond:'Wechselhaft'});
+      let cond = base.cond;
+      const spread = hi - lo;
+      if(code <= 1 && hi >= 24) cond += ', warm';
+      else if(code <= 1 && hi >= 20) cond += ', freundlich';
+      else if(code === 3 && rain < 25) cond += ', trocken';
+      else if(wind >= 28) cond += ', windig';
+      else if(spread >= 12 && hi >= 22) cond += ', warm';
+      else if(hi <= 16 && wind >= 22) cond += ', frisch';
+      else if(rain >= 50 && code >= 51) cond += ', nass';
+      return {ico:base.ico, cond};
+    },
+    render(el, day, isClimate){
+      const hi = Math.round(day.temperature_2m_max);
+      const lo = Math.round(day.temperature_2m_min);
+      const rain = day.precipitation_probability_max ?? day.precipitation_sum_mean ?? null;
+      const wind = Math.round(day.wind_speed_10m_max || 0);
+      const {ico, cond} = WX.describe(day.weather_code, hi, lo, rain || 0, wind);
+      const meta = [];
+      if(rain != null) meta.push('Regen ' + Math.round(rain) + (isClimate ? ' mm Ø' : ' %'));
+      if(wind) meta.push('Wind ' + wind + ' km/h');
+      const rise = WX.fmtTime(day.sunrise);
+      const set = WX.fmtTime(day.sunset);
+      if(rise && set) meta.push('☀ ' + rise + '–' + set);
+      el.classList.remove('loading','error');
+      el.innerHTML =
+        '<span class="ico">' + ico + '</span>' +
+        '<span class="temp">' + hi + '° <span class="lo">/ ' + lo + '°</span></span>' +
+        '<span class="cond">' + cond + '</span>' +
+        '<span class="meta">' + meta.join(' · ') + '</span>' +
+        '<span class="tag ' + (isClimate ? 'cl' : 'fc') + '">' + (isClimate ? 'Klimawert' : 'Vorhersage') + '</span>';
+    },
+    fail(el, msg){
+      el.classList.remove('loading');
+      el.classList.add('error');
+      el.querySelector('.cond').textContent = msg || 'Wetter nicht verfügbar';
+      el.querySelector('.ico').textContent = '⚠️';
+      el.querySelector('.temp').textContent = '—';
+      el.querySelector('.meta').textContent = '';
+    },
+    async fetchForecast(lat, lon, start, end){
+      const q = new URLSearchParams({
+        latitude: lat, longitude: lon, timezone: 'Europe/Stockholm',
+        start_date: start, end_date: end,
+        daily: 'weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max,sunrise,sunset',
+        wind_speed_unit: 'kmh'
+      });
+      const res = await fetch('https://api.open-meteo.com/v1/forecast?' + q);
+      if(!res.ok) throw new Error('forecast ' + res.status);
+      return res.json();
+    },
+    async fetchClimate(lat, lon, dates){
+      if(!dates.length) return {};
+      const q = new URLSearchParams({
+        latitude: lat, longitude: lon, timezone: 'Europe/Stockholm',
+        start_date: dates[0], end_date: dates[dates.length - 1],
+        models: 'EC_Earth3P_HR',
+        daily: 'weather_code,temperature_2m_max_mean,temperature_2m_min_mean,precipitation_sum_mean,wind_speed_10m_max_mean'
+      });
+      const res = await fetch('https://climate-api.open-meteo.com/v1/climate?' + q);
+      if(!res.ok) throw new Error('climate ' + res.status);
+      const data = await res.json();
+      const out = {};
+      const d = data.daily;
+      if(!d || !d.time) return out;
+      d.time.forEach(function(t, i){
+        out[t] = {
+          weather_code: d.weather_code[i],
+          temperature_2m_max: d.temperature_2m_max_mean[i],
+          temperature_2m_min: d.temperature_2m_min_mean[i],
+          precipitation_sum_mean: d.precipitation_sum_mean[i],
+          wind_speed_10m_max: d.wind_speed_10m_max_mean[i],
+          sunrise: null, sunset: null
+        };
+      });
+      return out;
+    },
+    updateStrategy(byDate){
+      const box = document.getElementById('wx-strategy');
+      const text = document.getElementById('wx-strategy-text');
+      if(!box || !text) return;
+      let best = null;
+      Object.keys(byDate).forEach(function(date){
+        const d = byDate[date];
+        if(d.source !== 'forecast') return;
+        const score = (d.temperature_2m_max || 0) - (d.precipitation_probability_max || 0) * 0.08;
+        if(!best || score > best.score) best = {date: date, score: score, hi: d.temperature_2m_max};
+      });
+      if(!best || best.hi < 20) return;
+      const nice = Object.keys(byDate).filter(function(date){
+        const d = byDate[date];
+        return d.source === 'forecast' && d.temperature_2m_max >= 22 && (d.precipitation_probability_max || 0) < 35;
+      }).sort();
+      if(nice.length < 2) return;
+      const fmt = function(iso){
+        const p = iso.split('-');
+        return p[2] + '.' + p[1];
+      };
+      text.innerHTML = 'Aktuell sieht das freundlichste Fenster bei <b>' + fmt(nice[0]) + '–' + fmt(nice[nice.length - 1]) +
+        '</b> aus – Outdoor- &amp; Fototage flexibel dorthin legen (v.&nbsp;a. Öland / Ales Stenar).';
+      box.style.display = 'block';
+    }
+  };
+
+  async function loadWeather(){
+    const els = Array.from(document.querySelectorAll('.wx[data-wx-date]'));
+    if(!els.length) return;
+    const dates = els.map(function(el){ return el.dataset.wxDate; }).sort();
+    const start = dates[0];
+    const end = dates[dates.length - 1];
+    const groups = {};
+    els.forEach(function(el){
+      const key = el.dataset.wxLat + ',' + el.dataset.wxLon;
+      if(!groups[key]) groups[key] = {lat:+el.dataset.wxLat, lon:+el.dataset.wxLon, els:[]};
+      groups[key].els.push(el);
+    });
+
+    const byDate = {};
+    const climateNeeded = {};
+    const updated = new Date();
+
+    await Promise.all(Object.values(groups).map(async function(g){
+      try{
+        const data = await WX.fetchForecast(g.lat, g.lon, start, end);
+        const d = data.daily;
+        const index = {};
+        d.time.forEach(function(t, i){ index[t] = i; });
+        g.els.forEach(function(el){
+          const date = el.dataset.wxDate;
+          const i = index[date];
+          if(i == null){
+            if(!climateNeeded[g.lat + ',' + g.lon]) climateNeeded[g.lat + ',' + g.lon] = {lat:g.lat, lon:g.lon, dates:[]};
+            climateNeeded[g.lat + ',' + g.lon].dates.push(date);
+            return;
+          }
+          const day = {
+            weather_code: d.weather_code[i],
+            temperature_2m_max: d.temperature_2m_max[i],
+            temperature_2m_min: d.temperature_2m_min[i],
+            precipitation_probability_max: d.precipitation_probability_max[i],
+            wind_speed_10m_max: d.wind_speed_10m_max[i],
+            sunrise: d.sunrise[i],
+            sunset: d.sunset[i],
+            source: 'forecast'
+          };
+          byDate[date] = day;
+          WX.render(el, day, false);
+        });
+      }catch(e){
+        g.els.forEach(function(el){ WX.fail(el, 'Vorhersage nicht erreichbar'); });
+      }
+    }));
+
+    await Promise.all(Object.values(climateNeeded).map(async function(g){
+      try{
+        const days = await WX.fetchClimate(g.lat, g.lon, g.dates.sort());
+        els.filter(function(el){
+          return +el.dataset.wxLat === g.lat && +el.dataset.wxLon === g.lon && days[el.dataset.wxDate];
+        }).forEach(function(el){
+          const date = el.dataset.wxDate;
+          const day = Object.assign({source:'climate'}, days[date]);
+          byDate[date] = day;
+          WX.render(el, day, true);
+        });
+      }catch(e){
+        g.dates.forEach(function(date){
+          const el = els.find(function(x){ return x.dataset.wxDate === date; });
+          if(el) WX.fail(el, 'Keine Prognose verfügbar');
+        });
+      }
+    }));
+
+    const stamp = 'Stand ' + WX.fmtDate(updated);
+    const u1 = document.getElementById('wx-updated');
+    const u2 = document.getElementById('wx-footer-updated');
+    if(u1) u1.textContent = stamp;
+    if(u2) u2.textContent = stamp;
+    WX.updateStrategy(byDate);
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadWeather);
+  else loadWeather();
+})();
+</script>
+
+<script>
+const PLACES = {
+  "granna":{t:"Gränna",lat:58.0242,lon:14.4681,boots:false,wiki:"https://de.wikipedia.org/wiki/Gr%C3%A4nna",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Graenna_Marktplatz.jpg/960px-Graenna_Marktplatz.jpg",b:"Gränna ist ein malerisches Städtchen am Ostufer des Vättern, berühmt für seine in Schaumanufakturen von Hand gedrehten rot-weißen Polkagris-Zuckerstangen. Durch die kopfsteingepflasterten Gassen kann man beim Bonbonkochen zusehen und von der Uferpromenade zur Fähre nach Visingsö übersetzen."},
+  "visingso":{t:"Visingsö",lat:58.05,lon:14.3333,boots:false,wiki:"https://en.wikipedia.org/wiki/Visings%C3%B6",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Visings%C3%B6%2C_Sm%C3%A5land%2C_Sweden_%286331132043%29.jpg/960px-Visings%C3%B6%2C_Sm%C3%A5land%2C_Sweden_%286331132043%29.jpg",b:"Visingsö ist die größte Insel im Vättern und war im Mittelalter ein Zentrum schwedischer Königsmacht, heute durchzogen von schnurgeraden Eichenalleen und Radwegen. Mit der Fähre ab Gränna erreicht man in 25 Minuten ein ruhiges Eiland, das sich am besten per Leihrad oder Pferdekutsche erkunden lässt."},
+  "brahekyrkan":{t:"Brahekyrkan",lat:58.0394,lon:14.3447,boots:false,wiki:"https://en.wikipedia.org/wiki/Brahe_Church",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Brahekyrkan_view01.jpg/960px-Brahekyrkan_view01.jpg",b:"Die Brahekyrkan auf Visingsö wurde im 17. Jahrhundert von der Grafenfamilie Brahe errichtet und besticht durch ihr reich ausgemaltes Inneres mit Barockgemälden und der Familiengruft. Die schlichte Außenfassade verbirgt einen der prachtvollsten Kircheninnenräume Smålands, nur wenige Gehminuten vom Fähranleger."},
+  "visingsborg":{t:"Schlossruine Visingsborg",lat:58.035,lon:14.3522,boots:true,wiki:"https://de.wikipedia.org/wiki/Visingsborg",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Visingsborg_view1.jpg/960px-Visingsborg_view1.jpg",b:"Visingsborg ist die eindrucksvolle Ruine des einstigen Stammschlosses der Grafen Brahe, das 1718 von gefangenen russischen Soldaten in Brand gesetzt wurde. Die efeuumrankten Mauern direkt am Seeufer laden zum Erkunden ein – festes Schuhwerk ist auf dem unebenen Gelände ratsam."},
+  "grenna-museum":{t:"Grenna Museum",lat:58.0219,lon:14.4675,boots:false,wiki:"https://de.wikipedia.org/wiki/Gr%C3%A4nna",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Grenna_museum_2015_01.jpg/960px-Grenna_museum_2015_01.jpg",b:"Das Grenna Museum im Zentrum von Gränna widmet sich der dramatischen Andrée-Polarexpedition von 1897, deren Ballonfahrt zum Nordpol tragisch scheiterte und erst 33 Jahre später aufgeklärt wurde. Originalfunde, Fotografien und das Polarcenter machen die packende Geschichte greifbar."},
+  "eksjo":{t:"Eksjö",lat:57.6667,lon:14.9708,boots:false,wiki:"https://de.wikipedia.org/wiki/Eksj%C3%B6",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Eksjoe_Altstadt3.jpg/960px-Eksjoe_Altstadt3.jpg",b:"Eksjö gilt als eine der besterhaltenen Holzstädte Schwedens, deren bunte Fachwerkhäuser aus dem 17. und 18. Jahrhundert ein lückenloses Altstadtensemble bilden. Beim Bummel durch die engen Gassen fühlt man sich um Jahrhunderte zurückversetzt."},
+  "skurugata":{t:"Skurugata",lat:57.6966,lon:15.0881,boots:true,wiki:"https://de.wikipedia.org/wiki/Skurugata",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Skurugata.jpg/960px-Skurugata.jpg",b:"Die Skurugata ist eine rund 800 Meter lange, bis zu 35 Meter tiefe Felsschlucht in einem Naturreservat bei Eksjö, deren moosbewachsene Steilwände eine kühle, urtümliche Atmosphäre schaffen. Der Weg durch die Klamm und hinauf zum Aussichtsberg Skuruhatt führt über Felsen und Geröll – feste Wanderschuhe sind unbedingt zu empfehlen."},
+  "kosta-boda":{t:"Kosta Boda / Glasreich",lat:56.8456,lon:15.3956,boots:false,wiki:"https://de.wikipedia.org/wiki/Kosta_(Schweden)",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Kosta_fabriken%2C_juni_2018.jpg/960px-Kosta_fabriken%2C_juni_2018.jpg",b:"Kosta Boda ist die älteste noch arbeitende Glashütte Schwedens (gegründet 1742) und Herzstück des „Glasreichs“ (Glasriket) in den Wäldern Smålands. Besucher können den Glasbläsern bei der Arbeit zusehen, eigene Stücke gestalten und durch Outlet und Designgalerien stöbern."},
+  "boda-borg":{t:"Boda Borg",lat:57.3886,lon:14.6628,boots:false,wiki:"https://en.wikipedia.org/wiki/Boda_Borg",img:null,q:"Boda Borg Sävsjö",b:"Boda Borg in Sävsjö ist ein Abenteuer- und Quest-Center in Småland, in dem Teams in themenbezogenen Räumen knifflige Aufgaben aus Geschick, Köpfchen und Teamarbeit lösen – ganz ohne Bildschirme. Ideal für einen aktiven, verregneten Tag."},
+  "astrid-naes":{t:"Astrid Lindgrens Näs",lat:57.67472,lon:15.85639,boots:false,wiki:"https://sv.wikipedia.org/wiki/Astrid_Lindgrens_N%C3%A4s",img:"https://upload.wikimedia.org/wikipedia/commons/c/c8/Astridmuseum.jpg",b:"Auf dem Hof Näs in Vimmerby wuchs Astrid Lindgren auf – heute ein liebevoll gestaltetes Kulturzentrum mit Geburtshaus, Erzählgarten und großer Ausstellung über ihr Leben und Werk. Das Elternhaus selbst lässt sich nur im Rahmen einer rund 45-minütigen Führung besichtigen, im Sommer täglich."},
+  "bullerbu":{t:"Sevedstorp / Bullerbü",lat:57.61194,lon:15.67139,boots:true,wiki:"https://de.wikipedia.org/wiki/Bullerb%C3%BC",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Bullerbyn-dsc_2725.jpg/960px-Bullerbyn-dsc_2725.jpg",b:"Im Weiler Sevedstorp stehen die drei roten Höfe, die als Kulisse der Bullerbü-Verfilmungen dienten und das Idyll von Astrid Lindgrens Kinderbüchern lebendig machen. Wer zwischen Wiesen, Schotterwegen und Hofgelände umherstreift, ist mit festem Schuhwerk am besten unterwegs."},
+  "katthult":{t:"Katthult (Gibberyd)",lat:57.68970,lon:15.55270,boots:true,wiki:"https://sv.wikipedia.org/wiki/Katthult",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Stora_huset_Katthult.jpg/960px-Stora_huset_Katthult.jpg",b:"Der Hof Katthult im Weiler Gibberyd bei Rumskulla war Drehort der Emil-von-Lönneberga-Filme und versetzt Besucher mitten in die småländische Bauernwelt der 1970er-Verfilmungen. Über Hof, Wiesen und den berühmten Tischlerschuppen geht es über unebenen Boden, robuste Schuhe sind sinnvoll."},
+  "vastervik":{t:"Västervik",lat:57.75694,lon:16.64167,boots:false,wiki:"https://de.wikipedia.org/wiki/V%C3%A4stervik",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Vaestervik_hafen.jpg/960px-Vaestervik_hafen.jpg",b:"Die charmante Holzstadt Västervik mit ihren gepflasterten Gassen, alten Båtsmansstugor und einem lebhaften Hafen ist das Tor zur weitläufigen Tjust-Schärenwelt. Vom Stadtkern aus starten Schärenboote, entlang der Uferpromenade lässt sich das maritime Småland entspannt erkunden."},
+  "skansberget":{t:"Skansberget (Aussicht)",lat:57.7530,lon:16.6390,boots:true,wiki:null,img:null,q:"Skansberget Västervik",b:"Der Aussichtshügel Skansberget erhebt sich über dem Zentrum von Västervik und belohnt den kurzen Aufstieg mit weitem Blick über Stadt, Hafen und die vorgelagerten Schären. Der Weg hinauf führt über Felsen und unebene Pfade – feste Schuhe empfehlenswert."},
+  "hasselo":{t:"Hasselö (Schären)",lat:57.83230,lon:16.74048,boots:true,wiki:"https://sv.wikipedia.org/wiki/Hassel%C3%B6,_Tjusts_sk%C3%A4rg%C3%A5rd",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Hassel%C3%B6_-_eiland_%287418854244%29.jpg/960px-Hassel%C3%B6_-_eiland_%287418854244%29.jpg",b:"Hasselö ist die größte bewohnte Insel der Västervik-Schären, autofrei per Boot erreichbar und durchzogen von Wanderwegen zwischen Laubwäldern, Felsen und einem beliebten Badestrand. Wer weiter zur Nachbarinsel Sladö wandert, sollte über Klippen und Naturpfade trittsicher unterwegs sein."},
+  "kalmar-slott":{t:"Kalmar Schloss",lat:56.65806,lon:16.35528,boots:false,wiki:"https://de.wikipedia.org/wiki/Schloss_Kalmar",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kalmar_Slott_Aug2011.jpg/960px-Kalmar_Slott_Aug2011.jpg",b:"Das Schloss Kalmar zählt zu den besterhaltenen Renaissanceschlössern Nordeuropas und war 1397 Schauplatz der Gründung der Kalmarer Union. Hinter dem wassernahen Wallgraben warten prunkvolle Säle, Verliese und Türme – es wirkt wie eine reale Fantasy-Festung."},
+  "kronan-museum":{t:"Kalmar läns museum (Kronan)",lat:56.66422,lon:16.37074,boots:false,wiki:"https://de.wikipedia.org/wiki/Kronan_(Schiff,_1672)",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kalmar_l%C3%A4ns_museum_%28f.d._%C3%A5ngkvarnen_i_Kalmar%29_i_juli_2009.JPG/960px-Kalmar_l%C3%A4ns_museum_%28f.d._%C3%A5ngkvarnen_i_Kalmar%29_i_juli_2009.JPG",b:"Im Kalmar läns museum, untergebracht in der alten Dampfmühle Ångkvarnen, erzählt die große Kronan-Ausstellung von dem 1676 gesunkenen Regalschiff und seinen geborgenen Schätzen. Kanonen, Goldmünzen und Alltagsfunde aus der Tiefe der Ostsee lassen die Katastrophe vor Öland lebendig werden."},
+  "olandsbron":{t:"Ölandbrücke",lat:56.67417,lon:16.42011,boots:false,wiki:"https://de.wikipedia.org/wiki/%C3%96landsbron",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/%C3%96landsbron.jpg/960px-%C3%96landsbron.jpg",b:"Die rund sechs Kilometer lange Ölandbrücke spannt sich über den Kalmarsund und verbindet das Festland bei Kalmar mit der Sonneninsel Öland. Bei ihrer Eröffnung 1972 war sie die längste Brücke Europas und bietet während der Überfahrt einen weiten Blick über das glitzernde Wasser."},
+  "stora-alvaret":{t:"Stora Alvaret",lat:56.466667,lon:16.55,boots:true,wiki:"https://de.wikipedia.org/wiki/Stora_Alvaret",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Stora_Alvaret_Windmill_1.jpg/960px-Stora_Alvaret_Windmill_1.jpg",b:"Das Stora Alvaret ist eine weite, baumlose Kalksteppe im Süden Ölands und Teil des UNESCO-Welterbes, deren karge Weite im Sommer von seltenen Orchideen und Wildblumen überzogen wird. Festes Schuhwerk ist ratsam, denn der Boden ist steinig, uneben und nach Regen oft feucht."},
+  "eketorp":{t:"Eketorp",lat:56.295639,lon:16.48625,boots:true,wiki:"https://de.wikipedia.org/wiki/Burg_Eketorp",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Eketorp_main_view.jpg/960px-Eketorp_main_view.jpg",b:"Die rekonstruierte Ringburg Eketorp lässt die eisenzeitliche und mittelalterliche Vergangenheit Ölands mit Wehrmauern, Grubenhäusern und freilaufenden Tieren lebendig werden. Auf dem Gelände geht es über Gras, Erde und Kopfsteinpflaster – bequemes, festes Schuhwerk ist sinnvoll."},
+  "ottenby":{t:"Ottenby",lat:56.2175,lon:16.415556,boots:true,wiki:"https://de.wikipedia.org/wiki/Naturreservat_Ottenby",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ottenby1.jpg/960px-Ottenby1.jpg",b:"Das Naturreservat Ottenby an der Südspitze Ölands ist eines der bedeutendsten Vogelparadiese Schwedens, wo Zugvögel über der Alvarlandschaft und entlang der Küste rasten. Mit Vogelwarte, Naturum und langen Strand- und Wiesenwegen lohnt sich robustes Schuhwerk."},
+  "lange-jan":{t:"Långe Jan",lat:56.196204,lon:16.398525,boots:true,wiki:"https://en.wikipedia.org/wiki/L%C3%A5nge_Jan",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/BB-B005.jpg/960px-BB-B005.jpg",b:"Der Långe Jan an Ölands Südkap ist mit gut 41 Metern der höchste Leuchtturm Skandinaviens und belohnt den Aufstieg über die Wendeltreppe mit weitem Blick über die Ostsee. Rund um den Turm führen steinige Küsten- und Alvarwege, auf denen feste Schuhe von Vorteil sind."},
+  "borgholms-slott":{t:"Borgholms Schlossruine",lat:56.870833,lon:16.644167,boots:true,wiki:"https://de.wikipedia.org/wiki/Schloss_Borgholm",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Borgholm_slott.JPG/960px-Borgholm_slott.JPG",b:"Die mächtige Ruine von Schloss Borgholm thront über der Stadt und gilt als eindrucksvollste Schlossruine Skandinaviens, deren leere Fensterhöhlen und Innenhöfe man frei erkunden kann. Wegen unebener Treppen und Schutt sind trittsichere Schuhe empfehlenswert."},
+  "solliden":{t:"Solliden",lat:56.865275,lon:16.634472,boots:false,wiki:"https://de.wikipedia.org/wiki/Schloss_Solliden",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Solliden_slott_II.JPG/960px-Solliden_slott_II.JPG",b:"Schloss Solliden, die sommerliche Residenz der schwedischen Königsfamilie nahe Borgholm, ist von einem prachtvollen Park im italienischen, niederländischen und englischen Stil umgeben. Die Wege durch die Gartenanlage sind gepflegt und gut begehbar."},
+  "himmelsberga":{t:"Himmelsberga",lat:56.73983,lon:16.71126,boots:false,wiki:"https://de.wikipedia.org/wiki/%C3%96land-Museum_Himmelsberga_f%C3%BCr_Kunst_und_Kulturgeschichte",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Himmelsberga_Dorfstra%C3%9Fe.JPG/960px-Himmelsberga_Dorfstra%C3%9Fe.JPG",b:"Das Freilichtmuseum Himmelsberga bewahrt die besterhaltene Dorfstraße Ölands mit originalgetreu eingerichteten Bauernhöfen aus dem 18. und 19. Jahrhundert. Auf dem überschaubaren, teils geschotterten Gelände reicht bequemes Alltagsschuhwerk."},
+  "byrums-raukar":{t:"Byrums Raukar",lat:57.22583,lon:16.95528,boots:true,wiki:"https://en.wikipedia.org/wiki/Byrums_raukar",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Raukensteine_Byrum2.JPG/960px-Raukensteine_Byrum2.JPG",b:"An der Westküste Nordölands ragen die Byrums Raukar auf, rund 120 bizarre Kalksteinsäulen, die das Meer über Jahrmillionen aus dem Fels herausmodelliert hat. Da man über felsigen Strand und lose Steine zwischen den Säulen klettert, sind feste Schuhe dringend zu empfehlen."},
+  "neptuni-akrar":{t:"Neptuni Åkrar",lat:57.348367,lon:17.030862,boots:true,wiki:"https://sv.wikipedia.org/wiki/Neptuni_%C3%A5krar",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/1043%C3%96land_Neptuni_%C3%A5krar.jpg/960px-1043%C3%96land_Neptuni_%C3%A5krar.jpg",b:"Die Neptuni Åkrar nördlich von Byxelkrok sind ausgedehnte, von der Eiszeit aufgeworfene Kieswälle, die sich im Sommer in ein blaues Meer aus blühendem Natternkopf verwandeln. Das Gehen über die lockeren Gerölllwälle ist anstrengend, stabile Schuhe sind wichtig."},
+  "lange-erik":{t:"Långe Erik",lat:57.367036,lon:17.097001,boots:true,wiki:"https://en.wikipedia.org/wiki/L%C3%A5nge_Erik",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Oeland_lighthouse_Lange_Erik.jpg/960px-Oeland_lighthouse_Lange_Erik.jpg",b:"Der weiße Leuchtturm Långe Erik markiert seit 1845 die Nordspitze Ölands und steht auf der kleinen Insel Stora Grundet in der Bucht von Grankullaviken. Der Weg dorthin führt über Steg und steinigen Küstengrund, festes Schuhwerk ist angenehm."},
+  "karlskrona-marinmuseum":{t:"Marinmuseum Karlskrona",lat:56.1614,lon:15.5995,boots:false,wiki:"https://en.wikipedia.org/wiki/Marinmuseum",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Marinmuseum_karlskrona_dag.jpg/960px-Marinmuseum_karlskrona_dag.jpg",b:"Auf der Insel Stumholmen erzählt das Marinmuseum, Schwedens nationales Marinemuseum, direkt am Wasser die Geschichte der Flotte – mit Galionsfiguren, U-Booten und einem Unterwassertunnel zu echten Schiffswracks. Der Eintritt ist frei, ebene Wege machen den Besuch bei jedem Wetter angenehm."},
+  "glimmingehus":{t:"Glimmingehus",lat:55.501111,lon:14.231111,boots:false,wiki:"https://de.wikipedia.org/wiki/Glimmingehus",img:"https://upload.wikimedia.org/wikipedia/commons/5/5b/Glimmingehus_-_KMB_-_16001000536089.jpg",b:"Glimmingehus ist die am besten erhaltene mittelalterliche Burg Skandinaviens, ein wuchtiger Steinbau aus dem frühen 16. Jahrhundert mitten in der weiten Felderlandschaft Skånes. Im Inneren führen steile Wendeltreppen durch dunkle Säle – ein Highlight für Mittelalter- und Fantasy-Fans."},
+  "ales-stenar":{t:"Ales Stenar",lat:55.382746,lon:14.054252,boots:true,wiki:"https://de.wikipedia.org/wiki/Ales_stenar",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ales_Stenar_from_pole_camera.jpg/960px-Ales_Stenar_from_pole_camera.jpg",b:"Hoch über dem Meer bei Kåseberga bildet Ales stenar mit 59 Steinen eine 67 Meter lange Schiffssetzung – eine der größten Skandinaviens und ein magischer Ort bei Sonnenauf- und -untergang. Der Aufstieg führt über einen steilen, grasbewachsenen Hügelpfad, festes Schuhwerk ist ratsam."},
+  "kaseberga":{t:"Kåseberga",lat:55.3831,lon:14.0650,boots:true,wiki:"https://de.wikipedia.org/wiki/K%C3%A5seberga",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/K%C3%A5seberga_vid_hamnen.jpg/960px-K%C3%A5seberga_vid_hamnen.jpg",b:"Der kleine Fischerhafen Kåseberga lockt mit Räuchereien, frischem Hering und rotweißen Hütten direkt unterhalb von Ales stenar. Von hier startet der Weg hinauf zu den Steinen; die unebenen Hafen- und Küstenwege machen stabile Schuhe sinnvoll."},
+  "kivik-musteri":{t:"Kivik Musteri",lat:55.683333,lon:14.229167,boots:false,wiki:"https://en.wikipedia.org/wiki/Kivik",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kiviks_Musteri_%284780064758%29.jpg/960px-Kiviks_Musteri_%284780064758%29.jpg",b:"Kiviks Musteri ist Schwedens bekannteste Apfelkelterei, die seit 1888 in den Obstgärten von Österlen Saft, Most und Cider herstellt. Im Hofladen und Café lassen sich die Produkte verkosten – ideal für einen entspannten Zwischenstopp."},
+  "kungagraven":{t:"Kungagraven (Kivik)",lat:55.683,lon:14.233,boots:true,wiki:"https://en.wikipedia.org/wiki/The_King%27s_Grave",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Kiviksgraven_2017.jpg/960px-Kiviksgraven_2017.jpg",b:"Die Kungagraven bei Kivik ist mit 75 Metern Durchmesser Schwedens größtes bronzezeitliches Rundgrab, dessen Grabkammer berühmte Felsritzungen von Schiffen, Pferden und einem Streitwagen birgt. Der Weg zum und um den Steinhügel verläuft über Schotter und Gras."},
+  "stenshuvud":{t:"Stenshuvud Nationalpark",lat:55.663056,lon:14.272778,boots:true,wiki:"https://de.wikipedia.org/wiki/Stenshuvud",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Stenshuvud_mot_s%C3%B6der.jpg/960px-Stenshuvud_mot_s%C3%B6der.jpg",b:"Der Nationalpark Stenshuvud erhebt sich als bewaldeter Granitberg über der Ostsee und vereint Buchenwälder, Heideflächen, Sandstrände und weite Ausblicke bis nach Bornholm. Die Aufstiege führen über Wurzeln, Felsen und teils steile Pfade – Wanderschuhe sind klar zu empfehlen."},
+  "simrishamn":{t:"Simrishamn",lat:55.554167,lon:14.35,boots:false,wiki:"https://de.wikipedia.org/wiki/Simrishamn",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Hotell_Svea%2C_Simrishamn.jpg/960px-Hotell_Svea%2C_Simrishamn.jpg",b:"Simrishamn ist das malerische Hauptstädtchen von Österlen, mit gepflasterten Gassen, niedrigen Schwedenhäusern in Stockrosen-Pracht und einem lebhaften Fischereihafen. Durch die kompakte Altstadt lässt es sich bequem bummeln und einkehren."},
+  "ystad":{t:"Ystad",lat:55.429167,lon:13.820833,boots:false,wiki:"https://de.wikipedia.org/wiki/Ystad",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ystad_stortorget.jpg/960px-Ystad_stortorget.jpg",b:"Ystads Altstadt zählt mit rund 300 Fachwerkhäusern zu den besterhaltenen Schwedens und ist als Schauplatz der Wallander-Krimis weltberühmt. Rund um den Stortorget und das Kloster lädt das Kopfsteinpflaster zu entspannten Spaziergängen ein."},
+  "ystad-studios":{t:"Ystad Studios",lat:55.4256,lon:13.8389,boots:false,wiki:"https://en.wikipedia.org/wiki/Ystad",img:null,q:"Ystad Studios Visitor Center",b:"Die Ystad Studios sind Skandinaviens größtes Filmstudio und Drehort der Wallander-Verfilmungen; im angeschlossenen Visitor Center tauchen Besucher interaktiv in die Welt von Drehbuch, Requisiten und Spezialeffekten ein. Das moderne Museum ist barrierearm und auch bei Regen ein lohnender Stopp."}
+};
+
+(function(){
+  const modal = document.getElementById('modal');
+  const imgWrap = modal.querySelector('.m-img');
+  const imgEl = imgWrap.querySelector('img');
+  const titleEl = modal.querySelector('.m-title');
+  const blurbEl = modal.querySelector('.m-blurb');
+  const linksEl = modal.querySelector('.m-links');
+  let lastFocus = null;
+
+  imgEl.addEventListener('error', function(){ imgWrap.style.display='none'; });
+
+  function mapsUrl(p){
+    const q = p.q ? encodeURIComponent(p.q) : (p.lat + ',' + p.lon);
+    return 'https://www.google.com/maps/search/?api=1&query=' + q;
+  }
+  function open(k){
+    const p = PLACES[k]; if(!p) return;
+    titleEl.textContent = p.t;
+    blurbEl.textContent = p.b;
+    if(p.img){ imgWrap.style.display='block'; imgEl.src = p.img; imgEl.alt = p.t; }
+    else { imgWrap.style.display='none'; imgEl.removeAttribute('src'); }
+    linksEl.innerHTML='';
+    const a = document.createElement('a');
+    a.href = mapsUrl(p); a.target='_blank'; a.rel='noopener'; a.className='m-btn';
+    a.textContent = '📍 In Google Maps öffnen'; linksEl.appendChild(a);
+    if(p.wiki){
+      const b = document.createElement('a');
+      b.href = p.wiki; b.target='_blank'; b.rel='noopener'; b.className='m-btn ghost';
+      b.textContent = '🔗 Mehr erfahren'; linksEl.appendChild(b);
+    }
+    lastFocus = document.activeElement;
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    modal.querySelector('.m-close').focus();
+  }
+  function close(){
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  document.addEventListener('click', function(e){
+    const trig = e.target.closest('.place');
+    if(trig){ e.preventDefault(); open(trig.dataset.k); return; }
+    if(e.target === modal || e.target.closest('.m-close')){ close(); }
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('open')) close(); });
+})();
+</script>
+</body>
+</html>
